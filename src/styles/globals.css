@@ -38,6 +38,7 @@
   --colour-neutral-720: #303236;
 
   /* Typography */
+  --font-family-primary: "Inter", sans-serif;
   --font-size-2xs: 10px;
   --font-size-xs: 12px;
   --font-size-sm: 14px;
