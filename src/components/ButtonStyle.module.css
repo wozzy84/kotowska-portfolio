@@ -48,3 +48,37 @@
     -8px -8px 50px 0px rgba(42, 94, 142, 0.2),
     4px 8px 80px 0px rgba(122, 33, 237, 0.24);
 }
+
+.button:active {
+  border-radius: 8px;
+  background: linear-gradient(
+      0deg,
+      rgba(242, 118, 146, 0.4) 0%,
+      rgba(242, 118, 146, 0.4) 100%
+    ),
+    radial-gradient(
+      189.21% 70.1% at 15.34% 39.06%,
+      rgba(131, 113, 243, 0.8) 0%,
+      rgba(69, 156, 236, 0) 100%
+    ),
+    radial-gradient(
+      132.71% 129.73% at 63.64% -12.5%,
+      #8400ff 0%,
+      rgba(86, 84, 74, 0.12) 100%
+    ),
+    radial-gradient(
+      51.42% 94.92% at 19.32% 40.62%,
+      #1864b7 0%,
+      rgba(23, 61, 102, 0.88) 100%
+    ),
+    radial-gradient(
+      23.21% 114.66% at 43.75% -31.25%,
+      rgba(24, 17, 24, 0.53) 21.25%,
+      #000 100%
+    ),
+    #030303;
+  background-blend-mode: overlay, normal, normal, normal, normal, normal;
+  box-shadow: 0px 2px 0px 0px rgba(80, 44, 126, 0.45) inset,
+    0px 0px 30px 0px rgba(255, 255, 255, 0.6) inset,
+    4px 8px 80px 0px rgba(122, 33, 237, 0.24);
+}
