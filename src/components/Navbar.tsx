@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavLogo from "./NavLogo";
 import DesktopNavLinks from "./DesktopNavLinks";
 import MobileMenuButton from "./MobileMenuButton";
@@ -11,6 +11,32 @@ const Navbar: React.FC = () => {
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
+
+  useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isDrawerOpen]);
+  
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsDrawerOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
