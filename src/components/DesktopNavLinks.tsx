@@ -1,11 +1,47 @@
 import Link from "next/link";
 function DesktopNavLinks(): JSX.Element {
   return (
-    <ul className="absolute right-0 flex flex-row space-x-6">
-      <li className="text-xl hover:text-blue-900 hover:font-semibold">
-        <Link href="/">Home</Link>
+    <ul className="h-9 justify-end items-center gap-1 inline-flex">
+      <li className="px-4 py-2 rounded justify-center items-center flex">
+        <Link
+          className="text-center text-[#1c1c1c] text-sm font-semibold font-['Inter'] leading-tight"
+          href="#"
+        >
+          About
+        </Link>
       </li>
-      {/* Add other navigation links */}
+      <li className="px-4 py-2 rounded justify-center items-center flex">
+        <Link
+          className="text-center text-[#1c1c1c] text-sm font-semibold font-['Inter'] leading-tight"
+          href="#"
+        >
+          Portfolio
+        </Link>
+      </li>
+      <li className="px-4 py-2 rounded justify-center items-center flex">
+        <Link
+          className="text-center text-[#1c1c1c] text-sm font-semibold font-['Inter'] leading-tight"
+          href="#"
+        >
+          Services
+        </Link>
+      </li>
+      <li className="px-4 py-2 rounded justify-center items-center flex">
+        <Link
+          className="text-center text-[#1c1c1c] text-sm font-semibold font-['Inter'] leading-tight"
+          href="#"
+        >
+          Testimonials
+        </Link>
+      </li>
+      <li className="px-4 py-2 rounded justify-center items-center flex">
+        <Link
+          className="text-center text-[#1c1c1c] text-sm font-semibold font-['Inter'] leading-tight"
+          href="#"
+        >
+          Contact
+        </Link>
+      </li>
     </ul>
   );
 }

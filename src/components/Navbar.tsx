@@ -12,17 +12,17 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <>
-      <div className="hidden relative py-6 sm:flex flex-col justify-center">
+    <div className="w-full h-[72px] py-[18px] bg-neutral-50 border-b border-[#dee4e9] flex-col justify-center items-center gap-2.5 inline-flex">
+      <div className="container mx-auto hidden relative md:flex self-stretch justify-between items-center inline-flex">
         <NavLogo />
         <DesktopNavLinks />
       </div>
-      <div className="sm:hidden relative flex flex-row my-4">
+      <div className="w-full md:hidden relative flex flex-row my-4">
         <NavLogo />
         <MobileMenuButton onClick={handleDrawerToggle} />
         <MobileDrawer isOpen={isDrawerOpen} onClose={handleDrawerToggle} />
       </div>
-    </>
+    </div>
   );
 };
 

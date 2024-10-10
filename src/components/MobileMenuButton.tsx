@@ -1,6 +1,6 @@
 function MobileMenuButton({ onClick }) {
   return (
-    <button className="absolute right-2 top-2 p-2" onClick={onClick}>
+    <button className="absolute left-2 top-2 p-2" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6"

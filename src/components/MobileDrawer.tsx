@@ -30,9 +30,20 @@ function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
       </button>
       <ul className="flex flex-col justify-center items-center space-y-4">
         <li className="text-3xl hover:text-blue-900 hover:font-semibold">
-          <Link href="/">Home</Link>
+          <Link href="#">About</Link>
         </li>
-        {/* Add other navigation links */}
+        <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+          <Link href="#">Portfolio</Link>
+        </li>
+        <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+          <Link href="#">Services</Link>
+        </li>
+        <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+          <Link href="#">Testimonials</Link>
+        </li>
+        <li className="text-3xl hover:text-blue-900 hover:font-semibold">
+          <Link href="#">Contact</Link>
+        </li>
       </ul>
     </div>
   );
