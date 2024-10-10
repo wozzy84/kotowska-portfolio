@@ -1,6 +1,5 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import LogoComponent from "@/components/NavLogo";
 import Button from "@/components/Button";
 import Navbar from "@/components/Navbar";
 
@@ -19,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="container mx-auto">
+      <div className="container max-w-screen-xl mx-auto">
         <div
           className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
         >
