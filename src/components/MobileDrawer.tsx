@@ -1,12 +1,10 @@
 import HomeIcon from "/public/svgs/home.svg";
 import CloseIcon from "/public/svgs/close.svg";
-import MailIcon from "/public/svgs/mail.svg";
 import PortfolioIcon from "/public/svgs/portfolio.svg";
 import AboutIcon from "/public/svgs/about.svg";
 import ServicesIcon from "/public/svgs/services.svg";
 import TestimonialsIcon from "/public/svgs/testimonials.svg";
 import ContactIcon from "/public/svgs/contact.svg";
-import Link from "next/link";
 
 interface MobileDrawerProps {
   isOpen: boolean;
