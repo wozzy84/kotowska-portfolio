@@ -1,0 +1,18 @@
+.desktopNavLinks {
+  color: var(--text-primary, #1c1c1c);
+  text-align: center;
+  /* label/medium */
+  font-family: Inter;
+  font-size: var(--font-size-sm, 14px);
+  font-style: normal;
+  font-weight: var(--font-weight-SemiBold, 600);
+  line-height: 140%; /* 19.6px */
+}
+.desktopNavLinks:hover {
+  border-radius: var(--radius-sm, 4px);
+  background: var(--surface-bg-module, #f2f5f7);
+}
+.navBar {
+  border-bottom: 1px solid var(--border-basic, #dee4e9);
+  background: var(--surface-bg, #fafafa);
+}
