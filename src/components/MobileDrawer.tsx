@@ -64,6 +64,7 @@ function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         <ul className="mt-6 ml-[6px] flex-col justify-start items-start gap-4 inline-flex">
           {MobileMenuItems.map((item) => (
             <Link
+              key={item.title}
               href={item.link}
               className="self-stretch p-2 justify-start items-center gap-2 inline-flex"
               tabIndex={isOpen ? 0 : -1}

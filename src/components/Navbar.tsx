@@ -5,7 +5,6 @@ import MobileMenuButton from "./MobileMenuButton";
 import MobileDrawer from "./MobileDrawer";
 import classNames from "classnames";
 import NavbarStyle from "./NavbarStyle.module.css";
-0;
 
 const Navbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -21,9 +20,9 @@ const Navbar: React.FC = () => {
     );
   };
 
-  const debounce = (func: (...args: any[]) => void, wait: number) => {
+  const debounce = (func: (...args: unknown[]) => void, wait: number) => {
     let timeout: NodeJS.Timeout;
-    return (...args: any[]) => {
+    return (...args: unknown[]) => {
       clearTimeout(timeout);
 
       timeout = setTimeout(() => func.apply(this, args), wait);
