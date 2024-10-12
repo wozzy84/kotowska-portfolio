@@ -8,6 +8,7 @@ import ContactIcon from "/public/svgs/contact.svg";
 import Link from "next/link";
 import classNames from "classnames";
 import MobileDrawerStyle from "./MobileDrawerStyle.module.css";
+import React from "react";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -47,6 +48,12 @@ const MobileMenuItems = [
   },
 ];
 
+const iconStyle = { color: "var(--text-secondary)" };
+
+MobileMenuItems.forEach((item) => {
+  item.icon = React.cloneElement(item.icon, { style: iconStyle });
+});
+
 function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
   return (
     <>
@@ -59,7 +66,10 @@ function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         )}
       >
         <button className="block" onClick={onClose} tabIndex={isOpen ? 0 : -1}>
-          <CloseIcon className="w-6 h-6" />
+          <CloseIcon
+            style={{ color: "var(--text-primary)" }}
+            className="w-6 h-6"
+          />
         </button>
         <ul className="mt-6 ml-[6px] flex-col justify-start items-start gap-4 inline-flex">
           {MobileMenuItems.map((item) => (

@@ -8,7 +8,10 @@ interface MobileMenuButtonProps {
 function MobileMenuButton({ onClick }: MobileMenuButtonProps) {
   return (
     <button onClick={onClick}>
-      <HamburgerMenu className="w-6 h-6 relative" />
+      <HamburgerMenu
+        style={{ color: "var(--text-primary)" }}
+        className="w-6 h-6 relative"
+      />
     </button>
   );
 }
