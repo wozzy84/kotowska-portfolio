@@ -4,7 +4,8 @@ import DesktopNavLinks from "./DesktopNavLinks";
 import MobileMenuButton from "./MobileMenuButton";
 import MobileDrawer from "./MobileDrawer";
 import classNames from "classnames";
-import NavbarStyle from "./NavbarStyle.module.css";0
+import NavbarStyle from "./NavbarStyle.module.css";
+0;
 
 const Navbar: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
