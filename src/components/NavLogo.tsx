@@ -1,7 +1,5 @@
 import React from "react";
 import Logo from "/public/Logo.svg";
-import classNames from "classnames";
-import NavbarStyle from "./NavbarStyle.module.css";
 
 function NavLogo() {
   return (
