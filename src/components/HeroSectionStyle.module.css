@@ -1,7 +1,12 @@
 .heroSection {
-  background-image: url("/bubbleBG.webp");
+  background: var(--surface-bg, #fafafa);
+}
+
+.heroSectionBackground {
+  background-image: url("/svgs/module-hero.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 45%;
   text-align: center;
   font-family: var(--font-family-primary, Inter);
   font-style: normal;
