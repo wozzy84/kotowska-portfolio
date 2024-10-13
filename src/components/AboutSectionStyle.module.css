@@ -1,0 +1,10 @@
+.aboutSection {
+  background-image: url("/svgs/bgShadows.svg");
+  /* var(--surface-bg-module, #f2f5f7); */
+  background-color: var(--surface-bg-module, #f2f5f7);
+  background-position: 0px -252.9px;
+  background-size: 100% 161.087%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+

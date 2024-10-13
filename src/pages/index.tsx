@@ -1,6 +1,7 @@
 // import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <Navbar></Navbar>
       <HeroSection></HeroSection>
+      <AboutSection></AboutSection>
     </>
   );
 }

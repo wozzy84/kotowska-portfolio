@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
         HeroSectionStyle.heroSection
       )}
     >
-      <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-16 pb-6 px-4">
+      <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-16 px-4">
         <h1 className={classNames("mb-2", HeroSectionStyle.heroHeader)}>
           Hello, my name is Ewa
         </h1>
