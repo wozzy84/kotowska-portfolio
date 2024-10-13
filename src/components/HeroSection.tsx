@@ -2,6 +2,7 @@ import React from "react";
 import HeroSectionStyle from "./HeroSectionStyle.module.css";
 import classNames from "classnames";
 import Button from "./Button";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
@@ -41,7 +42,7 @@ const HeroSection: React.FC = () => {
             }}
           ></Button>
         </div>
-        <img width="437" height="748" src="/ewa.webp" alt="Ewa" />
+        <Image width="437" height="748" src="/ewa.webp" alt="Ewa" />
       </div>
     </div>
   );
