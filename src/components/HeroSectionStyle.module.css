@@ -2,28 +2,21 @@
   background-image: url("/bubbleBG.webp");
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+  font-family: var(--font-family-primary, Inter);
+  font-style: normal;
 }
 
 .heroHeader {
   color: var(--text-primary, #1c1c1c);
-  text-align: center;
-
-  /* display/x-large n */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-3xl, 36px);
-  font-style: normal;
   font-weight: var(--font-weight-Bold, 700);
   line-height: var(--font-line-height-2xl, 40px); /* 111.111% */
   letter-spacing: -0.72px;
 }
 
 .heroSubHeader {
-  text-align: center;
-
-  /* display/2x-large */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--spacing-8, 64px);
-  font-style: normal;
   font-weight: var(--font-weight-Bold, 700);
   line-height: 74px; /* 100% */
   letter-spacing: -1.28px;
@@ -36,10 +29,7 @@
 .heroDetails {
   color: var(--text-primary, #1c1c1c);
   text-align: center;
-  /* body/large heavy */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-lg, 18px);
-  font-style: normal;
   font-weight: var(--font-weight-Medium, 500);
   line-height: 24px; /* 133.333% */
 }
