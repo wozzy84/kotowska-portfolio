@@ -1,0 +1,35 @@
+.heroSection {
+  background-image: url("/bubbleBG.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  font-family: var(--font-family-primary, Inter);
+  font-style: normal;
+}
+
+.heroHeader {
+  color: var(--text-primary, #1c1c1c);
+  font-size: var(--font-size-3xl, 36px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-2xl, 40px); /* 111.111% */
+  letter-spacing: -0.72px;
+}
+
+.heroSubHeader {
+  font-size: var(--spacing-8, 64px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: 74px; /* 100% */
+  letter-spacing: -1.28px;
+  background: linear-gradient(90deg, #555cf3 0%, #f47690 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDetails {
+  color: var(--text-primary, #1c1c1c);
+  text-align: center;
+  font-size: var(--font-size-lg, 18px);
+  font-weight: var(--font-weight-Medium, 500);
+  line-height: 24px; /* 133.333% */
+}
