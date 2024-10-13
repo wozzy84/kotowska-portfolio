@@ -1,0 +1,31 @@
+.aboutCard {
+  font-family: var(--font-family-primary, Inter);
+  border-radius: var(--radius-md, 16px);
+  background: var(--surface-bg-card, #fff);
+}
+
+.aboutMy {
+  color: var(--text-primary, #1c1c1c);
+  /* heading/h3 */
+  font-size: var(--font-size-lg, 18px);
+  font-weight: 600;
+  line-height: var(--font-size-xl, 24px); /* 133.333% */
+  letter-spacing: -0.18px;
+}
+
+.aboutTitle {
+  color: var(--text-primary, #1c1c1c);
+  /* heading/h2 */
+  font-size: var(--font-size-2xl, 32px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-xl, 36px); /* 112.5% */
+  letter-spacing: -0.32px;
+}
+
+.aboutDescription {
+  color: var(--text-secondary, #5f6367);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
+}

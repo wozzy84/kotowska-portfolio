@@ -2,6 +2,7 @@ import React from "react";
 import HeroSectionStyle from "./HeroSectionStyle.module.css";
 import classNames from "classnames";
 import Button from "./Button";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const HeroSection: React.FC = () => {
         HeroSectionStyle.heroSection
       )}
     >
-      <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-16 pb-6 px-4">
+      <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-16 px-4">
         <h1 className={classNames("mb-2", HeroSectionStyle.heroHeader)}>
           Hello, my name is Ewa
         </h1>
@@ -41,7 +42,7 @@ const HeroSection: React.FC = () => {
             }}
           ></Button>
         </div>
-        <img width="437" height="748" src="/ewa.webp" alt="Ewa" />
+        <Image width="437" height="748" src="/ewa.webp" alt="Ewa" />
       </div>
     </div>
   );

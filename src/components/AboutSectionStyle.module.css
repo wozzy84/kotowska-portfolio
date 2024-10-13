@@ -1,0 +1,36 @@
+.aboutSection {
+  background-image: url("/svgs/bgShadows.svg");
+  background-color: var(--surface-bg-module, #f2f5f7);
+  background-position: 0px -252.9px;
+  background-size: 100% 161.087%;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+}
+
+.aboutTitle {
+  color: var(--accent-primary, #555cf3);
+  font-family: var(--font-family-primary, Inter);
+  font-size: var(--font-size-xs, 12px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-sm, 18px); /* 150% */
+  text-transform: uppercase;
+}
+
+.aboutSubTitle {
+  color: var(--text-primary, #1c1c1c);
+  font-family: var(--font-family-primary, Inter);
+  font-size: var(--font-size-3xl, 36px);
+  font-weight: 700;
+  line-height: var(--font-line-height-2xl, 40px); /* 111.111% */
+  letter-spacing: -0.72px;
+}
+
+.aboutDescription {
+  color: var(--text-secondary, #5f6367);
+  font-family: var(--font-family-primary, Inter);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Medium, 500);
+  line-height: var(--font-line-height-md, 20px); /* 125% */
+  max-width: 890px;
+}
