@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import ExploreSection from "@/components/ExploreSection";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -20,6 +21,7 @@ export default function Home() {
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
+      <ExploreSection></ExploreSection>
     </>
   );
 }

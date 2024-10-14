@@ -1,6 +1,7 @@
 import AboutCard from "./AboutCard";
 import AboutSectionStyle from "./AboutSectionStyle.module.css";
 import classNames from "classnames";
+import SectionHeader from "./SectionHeader";
 
 const abouCardSections = [
   {
@@ -25,8 +26,7 @@ const abouCardSections = [
   },
 ];
 
-const { aboutSection, aboutTitle, aboutSubTitle, aboutDescription } =
-  AboutSectionStyle;
+const { aboutSection } = AboutSectionStyle;
 
 const AboutSection = () => {
   return (
@@ -36,16 +36,13 @@ const AboutSection = () => {
         aboutSection
       )}
     >
-      <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center  px-4 pb-12 gap-1 my-16 text-center">
-        <div className={aboutTitle}>ABOUT</div>
-        <div className={aboutSubTitle}>Hi there!</div>
-        <div className="pt-4 justify-start items-center gap-2.5 inline-flex">
-          <div className={aboutDescription}>
-            My mission is to bridge the gap between users and technology by
+      <SectionHeader
+        sectionName="About"
+        title="Hi there!"
+        description=" My mission is to bridge the gap between users and technology by
             rising awareness of user-centred approach and designing interfaces
-            that are not only beautiful but also highly functional
-          </div>
-        </div>
+            that are not only beautiful but also highly functional"
+      >
         <div className="px-4 justify-center flex flex-wrap items-start gap-6 mt-12 mb-16 text-start">
           {abouCardSections.map((section) => (
             <AboutCard
@@ -55,7 +52,7 @@ const AboutSection = () => {
             />
           ))}
         </div>
-      </div>
+      </SectionHeader>
     </section>
   );
 };
