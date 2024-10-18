@@ -32,7 +32,7 @@ const AboutSection = () => {
   return (
     <section
       className={classNames(
-        "flex justify-center items-center mx-auto",
+        " flex justify-center flex-col items-center mx-auto pb-16",
         aboutSection
       )}
     >
@@ -42,17 +42,16 @@ const AboutSection = () => {
         description=" My mission is to bridge the gap between users and technology by
             rising awareness of user-centred approach and designing interfaces
             that are not only beautiful but also highly functional"
-      >
-        <div className="px-4 justify-center flex flex-wrap items-start gap-6 mt-12 mb-16 text-start">
-          {abouCardSections.map((section) => (
-            <AboutCard
-              key={section.title}
-              title={section.title}
-              description={section.description}
-            />
-          ))}
-        </div>
-      </SectionHeader>
+      ></SectionHeader>
+      <div className="container max-w-screen-xl px-4 justify-center flex flex-wrap items-start gap-6 text-start">
+        {abouCardSections.map((section, index) => (
+          <AboutCard
+            key={section.title}
+            title={section.title}
+            description={section.description}
+          />
+        ))}
+      </div>
     </section>
   );
 };
