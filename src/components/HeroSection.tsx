@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
             designer with a passion for crafting immersive and user-centric
             experiences
           </p>
-          <div className="my-6 flex gap-2 flex-wrap justify-center items-center">
+          <div className="my-6 flex gap-2 flex-col lg:flex-row justify-center items-center">
             <Button
               label="Contact me"
               onClick={() => {
