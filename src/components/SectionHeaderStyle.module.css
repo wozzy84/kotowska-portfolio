@@ -7,6 +7,7 @@
   text-transform: uppercase;
 }
 
+
 .sectionTitleStyle {
   color: var(--text-primary, #1c1c1c);
   font-family: var(--font-family-primary, Inter);

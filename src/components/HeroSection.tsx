@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
               }}
             ></Button>
           </div>
-          <Image width="437" height="748" src="/ewa.webp" alt="Ewa" />
+          <Image width="437" height="748" src="/images/ewa.webp" alt="Ewa" />
         </div>
       </div>
     </section>

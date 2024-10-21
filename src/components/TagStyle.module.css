@@ -1,0 +1,21 @@
+.tagStyle {
+  display: inline-flex;
+  padding: 6px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-xl, 360px);
+  background: linear-gradient(254deg, #4bcbcb -1.44%, #1ad598 100%);
+  color: var(--text-accent-button, #f2f5f7);
+
+  /* label/small */
+  font-family: Inter;
+  font-size: var(--font-size-xs, 12px);
+  font-style: normal;
+  font-weight: var(--font-weight-SemiBold, 600);
+  line-height: 140%; /* 16.8px */
+}
+
+.tagStyle.smallStyle {
+  padding: var(--radius-xs, 4px) 12px;
+  font-size: 10px;
+}
