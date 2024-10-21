@@ -44,7 +44,7 @@ const AboutSection = () => {
             that are not only beautiful but also highly functional"
       ></SectionHeader>
       <div className="container max-w-screen-xl px-4 justify-center flex flex-wrap items-start gap-6 text-start">
-        {abouCardSections.map((section, index) => (
+        {abouCardSections.map((section) => (
           <AboutCard
             key={section.title}
             title={section.title}
