@@ -32,17 +32,17 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
         cardStyle
       )}
     >
-      <picture>
+      <picture className="w-full max-w-[428px] md:w-auto">
         <source media="(min-width: 768px)" srcSet={imageUrl} />
         <img
-          className="relative rounded-2xl"
+          className="w-full max-w-[428px] md:w-auto relative rounded-2xl"
           src={mobileImageUrl}
           alt="Card thumbnail"
         />
       </picture>
       <div
         className={classNames(
-          "grow shrink basis-0 md:pl-8 md:pr-6 pt-6 flex-col justify-start items-start gap-4 inline-flex max-w-[312px] md:max-w-max",
+          "grow shrink basis-0 md:pl-8 md:pr-6 pt-6 flex-col justify-start items-start gap-4 inline-flex md:max-w-max",
           { "md:pl-6": reversed, "md:pr-8": reversed }
         )}
       >

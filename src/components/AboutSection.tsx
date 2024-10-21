@@ -10,14 +10,14 @@ const abouCardSections = [
       "My background in social sciences and conflict resolution gives me a deep understanding of human behaviour and cognitive processes. Also, it allows me to navigate challenges of the design and development process, ensuring smooth and effective collaboration.",
   },
   {
-    title: "ethics",
-    description:
-      "I'm a firm believer in collaboration and transparency, working closely with clients and stakeholders to ensure that every project not only meets but exceeds expectations.",
-  },
-  {
     title: "approach",
     description:
       "My approach to design is rooted in empathy, curiosity, and continuous learning. I immerse myself in understanding the user journey, exploring new design trends, and experimenting with innovative tools and techniques to push the boundaries of what's possible.",
+  },
+  {
+    title: "ethics",
+    description:
+      "I'm a firm believer in collaboration and transparency, working closely with clients and stakeholders to ensure that every project not only meets but exceeds expectations.",
   },
   {
     title: "life",
