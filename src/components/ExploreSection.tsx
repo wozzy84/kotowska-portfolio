@@ -47,7 +47,7 @@ const ExploreSection: React.FC = () => {
   return (
     <section
       className={classNames(
-        "flex flex-col justify-center items-center",
+        "flex flex-col justify-center items-center pb-12",
         ExploreSectionStyle.sectionStyle
       )}
     >

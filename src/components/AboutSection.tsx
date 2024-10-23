@@ -32,7 +32,7 @@ const AboutSection = () => {
   return (
     <section
       className={classNames(
-        " flex justify-center flex-col items-center mx-auto pb-16",
+        "flex justify-center flex-col items-center mx-auto pb-16",
         aboutSection
       )}
     >
