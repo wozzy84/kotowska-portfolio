@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import SectionHeader from "./SectionHeader";
 import ExploreSectionStyle from "./ExploreSectionStyle.module.css";
 import classNames from "classnames";
 import { PortfolioCard, PortfolioCardProps } from "./PortfolioCard";
+import CaseStudyDrawer from "./CaseStudyDrawer";
 
-const cardContent: PortfolioCardProps[] = [
+type CardContentProps = Omit<PortfolioCardProps, "onClick">;
+
+const cardContent: CardContentProps[] = [
   {
     tag: "Mobile App",
     title: "Designing an AED Access App: Life-Saving Simplicity",
@@ -44,6 +48,58 @@ const cardContent: PortfolioCardProps[] = [
 ];
 
 const ExploreSection: React.FC = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    console.log("handleDrawerToggle", isDrawerOpen);
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  const syncHeight = () => {
+    const userPosition = window.scrollY;
+    document.documentElement.style.setProperty(
+      "--window-inner-height",
+      `${window.innerHeight + userPosition}px`
+    );
+  };
+
+  const debounce = (func: (...args: unknown[]) => void, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return (...args: unknown[]) => {
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  };
+
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      syncHeight();
+      if (window.innerWidth >= 1024) {
+        setIsDrawerOpen(false);
+      }
+    }, 100);
+
+    // Initial sync
+    syncHeight();
+
+    // Add event listeners
+    window.addEventListener("resize", handleResize);
+
+    // Lock body scroll when drawer is open
+    if (isDrawerOpen) {
+      document.documentElement.classList.add("is-locked");
+    } else {
+      document.documentElement.classList.remove("is-locked");
+    }
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.documentElement.classList.remove("is-locked");
+    };
+  }, [isDrawerOpen]);
+
   return (
     <section
       className={classNames(
@@ -66,9 +122,15 @@ const ExploreSection: React.FC = () => {
             imageUrl={card.imageUrl}
             mobileImageUrl={card.mobileImageUrl}
             reversed={card.reversed}
+            onClick={handleDrawerToggle}
           />
         ))}
       </div>
+      <CaseStudyDrawer
+        isOpen={isDrawerOpen}
+        onClose={handleDrawerToggle}
+        caseStudyContent={<div>Case Study Content</div>}
+      />
     </section>
   );
 };

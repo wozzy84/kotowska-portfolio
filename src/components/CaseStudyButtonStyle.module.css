@@ -1,0 +1,21 @@
+.buttonStyle {
+  cursor: pointer;
+  color: var(--text-accent-button, #f2f5f7);
+  background: var(--accent-primary, #555cf3);
+  text-align: center;
+
+  /* label/medium */
+  font-family: Inter;
+  font-size: var(--font-size-sm, 14px);
+  font-weight: var(--font-weight-SemiBold, 600);
+  line-height: 140%; /* 19.6px */
+}
+
+.buttonStyle:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    var(--accent-primary, #555cf3);
+}
