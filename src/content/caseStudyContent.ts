@@ -13,9 +13,15 @@ export interface CaseStudyContent {
     approach: CaseStudySection;
     solution: CaseStudySection;
     outcomes: CaseStudySection;
-    images: string[];
+    images: CaseStudyImage[];
 }
 
+interface CaseStudyImage {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+}
 
 export const caseStudyContent: Record<string, CaseStudyContent> = {
     "1_aed": {
@@ -43,7 +49,11 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "The app, while delayed due to changes in ownership, was eventually launched—though not in the form I initially designed. Nonetheless, my contribution ensured the foundation was solid, user-focused, and built to handle the high-stakes nature of the task. This project underscored the importance of balancing stakeholder expectations, simplifying complex problems, and maintaining a clear focus on user needs, especially when lives are at stake. It also highlighted my adaptability and communication skills in managing a project with passionate but non-technical stakeholders."
         },
-        images: ["aed_1.jpg", "aed_2.jpg", "aed_3.jpg"],
+        images: [
+            {src: "images/aed_1.webp", alt: "AED Access App", width: 456, height: 400}, 
+            {src: "images/aed_2.webp", alt: "AED Access App", width: 624, height: 400},
+            {src: "images/aed_3.webp", alt: "AED Access App", width: 535, height: 400},
+        ],
         
     },
     "2_workzone":  {
@@ -71,7 +81,12 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "By the end of my engagement, WorkZone had gained greater prominence within KMD’s product portfolio, expanding into new markets and countries. The design improvements I led contributed to enhanced user experiences, better integration across platforms, and a more cohesive design system. Personally, I learned the value of frequent face-to-face interactions in fostering collaboration and building strong organisational culture. Despite the challenges, the international scope of the project taught me to appreciate diverse perspectives, which enriched my approach to problem-solving and design."
         },
-        images: [],
+        images: [
+              {src: "images/workzone_1.webp", alt: "WorkZone Platform", width: 456, height: 400}, 
+              {src: "images/workzone_2.webp", alt: "WorkZone Platform", width: 684, height: 400}, 
+              {src: "images/workzone_3.webp", alt: "WorkZone Platform", width: 891, height: 400}, 
+              {src: "images/workzone_4.webp", alt: "WorkZone Platform", width: 684, height: 400}, 
+        ],
         
     },
     "3_luxmed": {
@@ -99,7 +114,13 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "The result was a robust platform that not only met the business needs but also provided an enjoyable experience for its users. The gamification aspect of the platform became a unique selling point, making HR operations more engaging. After LUX MED’s acquisition, the platform successfully transitioned into the healthcare market with a clean and professional interface that reflected their brand. The project pushed me to think creatively while dealing with real-world constraints like existing frameworks, limited resources, and a lack of upfront analysis. Ultimately, I learned that patience, clear communication, and a relentless focus on the user experience can overcome even the most chaotic environments."
         },
-        images: [],
+        images: [
+               {src: "images/luxmed_1.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
+               {src: "images/luxmed_2.webp", alt: "Luxmed Platform", width: 496, height: 400}, 
+               {src: "images/luxmed_3.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
+               {src: "images/luxmed_4.webp", alt: "Luxmed Platform", width: 757, height: 400}, 
+               {src: "images/luxmed_5.webp", alt: "Luxmed Platform", width: 424, height: 400}, 
+        ],
         
     },
     "4_sustainability":  {
@@ -127,6 +148,13 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "This project was a balancing act between innovation and sensitivity to the client’s comfort zone. Despite initial resistance, the new design proved highly effective, leading to smoother user flows and a more efficient system. The project reaffirmed my belief in the power of persistence, communication, and incremental change when dealing with large, legacy systems. Most importantly, it showcased my ability to manage complex projects involving multiple stakeholders, negotiate change, and deliver a product that both meets the client's needs and significantly improves the user experience."
         },
-        images: [],
+        images: [
+             {src: "images/sustainability_1.webp", alt: "Sustainable Brands", width: 655, height: 400}, 
+             {src: "images/sustainability_2.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "images/sustainability_3.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "images/sustainability_4.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "images/sustainability_5.webp", alt: "Sustainable Brands", width: 456, height: 400}, 
+             {src: "images/sustainability_6.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+        ],
     }
 };
