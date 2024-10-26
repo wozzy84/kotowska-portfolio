@@ -1,16 +1,26 @@
 import React from "react";
 import CaseStudyButton from "./CaseStudyButton";
 import Tag from "./Tag";
+import CloseCaseStudyIcon from "/public/svgs/close-case-study.svg";
+import classNames from "classnames";
+import CaseStudyDrawerStyle from "./CaseStudyDrawerStyle.module.css";
+import { CaseStudyContent } from "@/content/caseStudyContent";
 
 interface CaseStudyDrawerProps {
   isOpen: boolean;
   onClose: () => void;
+  caseStudyContent: CaseStudyContent;
 }
+
+const { containerStyle, titleStyle, subtitleStyle } = CaseStudyDrawerStyle;
 
 const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
   isOpen,
   onClose,
+  caseStudyContent,
 }) => {
+  const { tag, title, subtitle } = caseStudyContent;
+
   return (
     <>
       <div
@@ -18,19 +28,32 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="w-[900px] min-h-full flex-col justify-start items-start inline-flex">
-          <div className="self-stretch h-[156px] p-4 bg-neutral-50 rounded-tl-lg flex-col justify-start items-center gap-2 flex">
+        <div
+          className={classNames(
+            "w-[900px] min-h-full flex-col rounded-tl-lg justify-start items-start inline-flex",
+            containerStyle
+          )}
+        >
+          <div className="self-stretch  p-4 flex-col justify-start items-center gap-2 flex">
             <div className="self-stretch justify-end items-center gap-2.5 inline-flex">
-              <div className="w-6 h-6 rounded justify-center items-center flex">
-                <div className="w-6 h-6 p-1.5 justify-center items-center inline-flex" />
-              </div>
+              <button className="w-6 h-6 rounded justify-center items-center flex">
+                <CloseCaseStudyIcon
+                  style={{ color: "var(--text-secondary)" }}
+                  onClick={onClose}
+                  onKeyDown={(e: React.KeyboardEvent<HTMLButtonElement>) => {
+                    if (e.key === "Enter") {
+                      onClose();
+                    }
+                  }}
+                />
+              </button>
             </div>
-            <Tag label="Some tag" small />
-            <div className="self-stretch text-center text-[#1c1c1c] text-[32px] font-bold font-['Inter'] leading-9">
-              Title lorem ipsum
+            <Tag label={tag} small />
+            <div className={titleStyle}>
+              {title}
             </div>
-            <div className="self-stretch text-center text-[#5f6367] text-sm font-normal font-['Inter'] leading-[18px]">
-              Client: Lorem
+            <div className={subtitleStyle}>
+              {subtitle}
             </div>
           </div>
           <div className="self-stretch bg-neutral-50 shadow border-b border-[#dee4e9] justify-center items-start inline-flex">

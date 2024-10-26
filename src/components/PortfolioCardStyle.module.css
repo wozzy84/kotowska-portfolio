@@ -17,7 +17,6 @@
 .titleStyle {
   color: var(--text-primary, #1c1c1c);
   /* heading/h2 */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-2xl, 32px);
   font-weight: var(--font-weight-Bold, 700);
   line-height: var(--font-line-height-xl, 36px); /* 112.5% */
@@ -33,7 +32,6 @@
 .descriptionStyle {
   color: var(--text-secondary, #5f6367);
   /* body/small light */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-sm, 14px);
   font-weight: var(--font-weight-Regular, 400);
   line-height: var(--font-size-lg, 18px); /* 128.571% */
@@ -50,7 +48,6 @@
   color: var(--text-primary, #1c1c1c);
   text-align: center;
   /* label/medium */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-sm, 14px);
   font-weight: var(--font-weight-SemiBold, 600);
   line-height: 140%; /* 19.6px */

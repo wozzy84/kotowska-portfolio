@@ -1,5 +1,4 @@
 .aboutCard {
-  font-family: var(--font-family-primary, Inter);
   border-radius: var(--radius-md, 16px);
   background: var(--surface-bg-card, #fff);
 }

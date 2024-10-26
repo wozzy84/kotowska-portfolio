@@ -3,9 +3,6 @@
   color: var(--text-accent-button, #f2f5f7);
   background: var(--accent-primary, #555cf3);
   text-align: center;
-
-  /* label/medium */
-  font-family: Inter;
   font-size: var(--font-size-sm, 14px);
   font-weight: var(--font-weight-SemiBold, 600);
   line-height: 140%; /* 19.6px */

@@ -1,6 +1,5 @@
 .sectionNameStyle {
   color: var(--accent-primary, #555cf3);
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-xs, 12px);
   font-weight: var(--font-weight-Bold, 700);
   line-height: var(--font-line-height-sm, 18px); /* 150% */
@@ -10,7 +9,6 @@
 
 .sectionTitleStyle {
   color: var(--text-primary, #1c1c1c);
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-3xl, 36px);
   font-weight: 700;
   line-height: var(--font-line-height-2xl, 40px); /* 111.111% */
@@ -19,7 +17,6 @@
 
 .sectionDescriptionStyle {
   color: var(--text-secondary, #5f6367);
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-md, 16px);
   font-weight: var(--font-weight-Medium, 500);
   line-height: var(--font-line-height-md, 20px); /* 125% */

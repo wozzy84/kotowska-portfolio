@@ -10,7 +10,6 @@
   color: var(--text-primary, #1c1c1c);
   text-align: center;
   /* label/large */
-  font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-md, 16px);
   font-style: normal;
   font-weight: var(--font-weight-SemiBold, 600);
