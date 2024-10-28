@@ -1,0 +1,23 @@
+.tabsContainerStyle {
+  border-bottom: 1px solid var(--border-basic, #dee4e9);
+  background: var(--surface-bg, #fafafa);
+  /* portfolio-overview-heade */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.navButtonStyle {
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary, #5f6367);
+  font-size: var(--font-size-xs, 12px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-sm, 18px); /* 150% */
+}
+
+.navButtonStyle:hover {
+  background: var(--surface-bg-module, #f2f5f7);
+  color: var(--text-primary, #1c1c1c);
+}
+
+.navButtonStyle.activeStyle {
+  border-bottom: 2px solid var(--accent-primary, #555cf3);
+  color: var(--accent-primary, #555cf3);
+}
