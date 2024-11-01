@@ -46,7 +46,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ tabs, children }) => {
           </button>
         ))}
       </div>
-      <div className="mt-4">
+      <div className="mt-4 overflow-auto">
         {children.map((child, index) => (
           <div
             key={index}
