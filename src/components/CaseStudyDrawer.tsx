@@ -72,10 +72,11 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
             <div className={subtitleStyle}>{subtitle}</div>
           </div>
 
-          <TabsNavigation tabs={tabs}>
+          <TabsNavigation tabs={tabs} isOpen={isOpen}>
             <CaseOverview
               caseStudyContent={caseStudyContent}
               onClick={onClose}
+            
             ></CaseOverview>
             <div>Pictures placeholder</div>
           </TabsNavigation>

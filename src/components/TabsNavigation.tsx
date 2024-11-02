@@ -6,12 +6,17 @@ import { Tab } from "./CaseStudyDrawer";
 interface TabNavigationProps {
   tabs: Tab[];
   children: React.ReactNode[];
+  isOpen: boolean;
 }
 
 const { tabContainerStyle, navButtonStyle, buttonTextStyle, activeStyle } =
   CaseStudyNavigationStyle;
 
-const TabNavigation: React.FC<TabNavigationProps> = ({ tabs, children }) => {
+const TabNavigation: React.FC<TabNavigationProps> = ({
+  tabs,
+  children,
+  isOpen,
+}) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index: number) => {
@@ -46,13 +51,13 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ tabs, children }) => {
           </button>
         ))}
       </div>
-      <div className="mt-4 overflow-auto">
+      <div className="overflow-auto" ref={(el) => { if (isOpen && el) el.scrollTop = 0; }}>
         {children.map((child, index) => (
           <div
-            key={index}
-            className={classNames({ hidden: activeTab !== index })}
+        key={index}
+        className={classNames({ hidden: activeTab !== index })}
           >
-            {child}
+        {child}
           </div>
         ))}
       </div>

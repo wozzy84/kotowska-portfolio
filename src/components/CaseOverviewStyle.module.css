@@ -20,6 +20,13 @@
   top: 0;
 }
 
+.dotIconStyle {
+  color: var(--accent-primary, #555cf3);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+
 .descriptionStyle {
   color: var(--text-secondary, #5f6367);
   font-size: var(--font-size-sm, 14px);

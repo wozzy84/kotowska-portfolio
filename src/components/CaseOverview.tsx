@@ -3,15 +3,22 @@ import CaseStudyButton from "./CaseStudyButton";
 import { CaseStudyContent } from "@/content/caseStudyContent";
 import CaseOverviewStyle from "./CaseOverviewStyle.module.css";
 import classNames from "classnames";
-import CheckCircleIcon from "/public/svgs/check-circle-2.svg";
+import CheckCircleIcon from "/public/svgs/check-circle.svg";
+import CirckeDotIcon from "/public/svgs/circle-dot.svg";
 
 interface CaseOverviewProps {
   caseStudyContent: CaseStudyContent;
   onClick: () => void;
+
 }
 
-const { sectionStyle, titleStyle, checkIconStyle, descriptionStyle } =
-  CaseOverviewStyle;
+const {
+  sectionStyle,
+  titleStyle,
+  checkIconStyle,
+  descriptionStyle,
+  dotIconStyle,
+} = CaseOverviewStyle;
 
 const CaseOverview: React.FC<CaseOverviewProps> = ({
   onClick,
@@ -29,7 +36,7 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
         sectionStyle
       )}
     >
-      <div className="flex flex-col justify-start items-start h-full">
+      <div className="flex flex-col justify-start items-start h-full relative">
         {sections.map((section, index) => (
           <div key={index}>
             <h2 className={titleStyle}>
@@ -39,6 +46,7 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
             <p className={descriptionStyle}>{section.description}</p>
           </div>
         ))}
+        <CirckeDotIcon className={dotIconStyle} />
       </div>
       <div className="pt-12 pb-4 flex-col justify-end items-start gap-2.5 flex">
         <CaseStudyButton label="Close case overview" onClick={onClick} />
