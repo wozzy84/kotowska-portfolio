@@ -1,0 +1,22 @@
+.containerStyle {
+  background: var(--surface-bg, #fafafa);
+}
+.titleStyle {
+  color: var(--text-primary, #1c1c1c);
+  text-align: center;
+  max-width: 640px;
+  font-size: var(--font-size-2xl, 32px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-xl, 36px); /* 112.5% */
+  letter-spacing: -0.32px;
+}
+
+.subtitleStyle {
+  color: var(--text-secondary, #5f6367);
+  text-align: center;
+  max-width: 640px;
+  font-size: var(--font-size-sm, 14px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-lg, 18px); /* 128.571% */
+  letter-spacing: -0.14px;
+}

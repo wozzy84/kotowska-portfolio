@@ -1,0 +1,19 @@
+.sectionStyle {
+  background: var(--surface-bg-case-overview, #fff);
+}
+.galleryDescriptionStyle {
+  color: var(--text-primary, #1c1c1c);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
+}
+
+.gallerySlideStyle {
+  max-width: fit-content;
+  height: 400px;
+}
+
+.imageStyle {
+  height: 400px;
+}

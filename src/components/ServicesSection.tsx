@@ -8,6 +8,8 @@ import WayPointsIcon from "/public/svgs/waypoints.svg";
 import MousePointerClickIcon from "/public/svgs/mouse-pointer-click.svg";
 import ServicesCard from "./ServicesCard";
 
+import "swiper/css";
+
 const services = [
   {
     title: "UI Design",

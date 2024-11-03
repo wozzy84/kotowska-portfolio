@@ -4,10 +4,7 @@
 .MobileDrawerMenuItem {
   color: var(--text-primary, #1c1c1c);
   text-align: center;
-  /* label/medium */
-  font-family: Inter;
   font-size: var(--font-size-sm, 14px);
-  font-style: normal;
   font-weight: var(--font-weight-SemiBold, 600);
   line-height: 140%; /* 19.6px */
 }

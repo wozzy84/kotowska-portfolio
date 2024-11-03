@@ -8,9 +8,7 @@
   color: var(--text-accent-button, #f2f5f7);
 
   /* label/small */
-  font-family: Inter;
   font-size: var(--font-size-xs, 12px);
-  font-style: normal;
   font-weight: var(--font-weight-SemiBold, 600);
   line-height: 140%; /* 16.8px */
 }

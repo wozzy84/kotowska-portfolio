@@ -11,6 +11,7 @@ export interface PortfolioCardProps {
   imageUrl: string;
   mobileImageUrl: string;
   reversed: boolean;
+  onClick: () => void;
 }
 
 const { cardStyle, titleStyle, descriptionStyle, readMoreStyle } =
@@ -23,9 +24,11 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
   imageUrl,
   mobileImageUrl,
   reversed,
+  onClick,
 }) => {
   return (
     <div
+      onClick={onClick}
       className={classNames(
         "max-w-[1118px] pb-0 md:pb-6 mb-6 md:p-6 rounded-3xl flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start",
         { "md:flex-row-reverse": reversed },
