@@ -5,7 +5,6 @@ import Button from "./Button";
 import Image from "next/image";
 
 const HeroSection: React.FC = () => {
-  console.log("HeroSection");
   return (
     <section className={HeroSectionStyle.heroSection}>
       <div

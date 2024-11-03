@@ -1,4 +1,5 @@
-interface CaseStudySection {
+
+export interface CaseStudySection {
     title: string;
     description: string;
 }
@@ -13,10 +14,11 @@ export interface CaseStudyContent {
     approach: CaseStudySection;
     solution: CaseStudySection;
     outcomes: CaseStudySection;
+    sliderSummary: string;
     images: CaseStudyImage[];
 }
 
-interface CaseStudyImage {
+export interface CaseStudyImage {
     src: string;
     alt: string;
     width: number;
@@ -49,10 +51,11 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "The app, while delayed due to changes in ownership, was eventually launched—though not in the form I initially designed. Nonetheless, my contribution ensured the foundation was solid, user-focused, and built to handle the high-stakes nature of the task. This project underscored the importance of balancing stakeholder expectations, simplifying complex problems, and maintaining a clear focus on user needs, especially when lives are at stake. It also highlighted my adaptability and communication skills in managing a project with passionate but non-technical stakeholders."
         },
+        sliderSummary: "I led the design of a life-saving app for AED accessibility, working with major stakeholders in the IT and pharmaceutical industries. The app focused on quick, intuitive navigation and first aid instructions, ultimately improving access to defibrillators. Despite challenges stemming from passionate yet non-technical stakeholders and shifting project goals, I successfully delivered a user-friendly solution. My role included conducting workshops, creating wireframes, and ensuring user testing with target audiences, demonstrating my ability to drive complex, high-stakes projects to completion.",
         images: [
-            {src: "images/aed_1.webp", alt: "AED Access App", width: 456, height: 400}, 
-            {src: "images/aed_2.webp", alt: "AED Access App", width: 624, height: 400},
-            {src: "images/aed_3.webp", alt: "AED Access App", width: 535, height: 400},
+            {src: "/images/aed_1.webp", alt: "AED Access App", width: 456, height: 400}, 
+            {src: "/images/aed_2.webp", alt: "AED Access App", width: 624, height: 400},
+            {src: "/images/aed_3.webp", alt: "AED Access App", width: 535, height: 400},
         ],
         
     },
@@ -81,11 +84,12 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "By the end of my engagement, WorkZone had gained greater prominence within KMD’s product portfolio, expanding into new markets and countries. The design improvements I led contributed to enhanced user experiences, better integration across platforms, and a more cohesive design system. Personally, I learned the value of frequent face-to-face interactions in fostering collaboration and building strong organisational culture. Despite the challenges, the international scope of the project taught me to appreciate diverse perspectives, which enriched my approach to problem-solving and design."
         },
+        sliderSummary: "As a UI/UX designer, I worked on KMD’s flagship WorkZone platform, an EIM solution for large organisations. My role spanned both maintenance and design improvements, including a transition to Fluent UI. Key challenges included limited user feedback and coordinating across diverse, international teams. I focused on user education, led design system improvements, and helped expand the product’s reach in new markets. This experience reinforced the importance of collaboration and face-to-face interaction in a complex, multi-team environment.",
         images: [
-              {src: "images/workzone_1.webp", alt: "WorkZone Platform", width: 456, height: 400}, 
-              {src: "images/workzone_2.webp", alt: "WorkZone Platform", width: 684, height: 400}, 
-              {src: "images/workzone_3.webp", alt: "WorkZone Platform", width: 891, height: 400}, 
-              {src: "images/workzone_4.webp", alt: "WorkZone Platform", width: 684, height: 400}, 
+              {src: "/images/workzone_1.webp", alt: "WorkZone Platform", width: 456, height: 400}, 
+              {src: "/images/workzone_2.webp", alt: "WorkZone Platform", width: 684, height: 400}, 
+              {src: "/images/workzone_3.webp", alt: "WorkZone Platform", width: 891, height: 400}, 
+              {src: "/images/workzone_4.webp", alt: "WorkZone Platform", width: 684, height: 400}, 
         ],
         
     },
@@ -104,7 +108,7 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
         },
         approach: {
             title: "The Approach",
-            description: "My approach was to be pragmatic and patient. I started by auditing the platform, identifying usability issues, and prioritizing areas that could be improved without disrupting the overall system. I created prototypes and mockups to visualize how new features and improvements could be seamlessly integrated into the platform. For new features, I designed UI components that aligned with the platform's growing needs while keeping the user experience as intuitive as possible. One of the more creative aspects was the development of a fantasy-themed UI where navigation took the form of a map of a fantastic world. Achievements and interactions were gamified, inspired by classic RPG games, making the platform not only functional but also engaging and fun for the users."
+            description: "My approach was to be pragmatic and patient. I started by auditing the platform, identifying usability issues, and prioritizing areas that could be improved without disrupting the overall system. I created prototypes and mockups to visualize how new features and improvements could be seamlessly integrated into the platform. <br/><br/> For new features, I designed UI components that aligned with the platform's growing needs while keeping the user experience as intuitive as possible. One of the more creative aspects was the development of a fantasy-themed UI where navigation took the form of a map of a fantastic world. Achievements and interactions were gamified, inspired by classic RPG games, making the platform not only functional but also engaging and fun for the users."
         },
         solution: {
             title: "The Solution",
@@ -112,14 +116,17 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
         },
         outcomes:{
             title: "Outcomes and Takeaways",
-            description: "The result was a robust platform that not only met the business needs but also provided an enjoyable experience for its users. The gamification aspect of the platform became a unique selling point, making HR operations more engaging. After LUX MED’s acquisition, the platform successfully transitioned into the healthcare market with a clean and professional interface that reflected their brand. The project pushed me to think creatively while dealing with real-world constraints like existing frameworks, limited resources, and a lack of upfront analysis. Ultimately, I learned that patience, clear communication, and a relentless focus on the user experience can overcome even the most chaotic environments."
+            description: "The result was a robust platform that not only met the business needs but also provided an enjoyable experience for its users. The gamification aspect of the platform became a unique selling point, making HR operations more engaging. After LUX MED’s acquisition, the platform successfully transitioned into the healthcare market with a clean and professional interface that reflected their brand. <br/><br/>The project pushed me to think creatively while dealing with real-world constraints like existing frameworks, limited resources, and a lack of upfront analysis. Ultimately, I learned that patience, clear communication, and a relentless focus on the user experience can overcome even the most chaotic environments."
         },
+
+        sliderSummary: "As a sole UX designer, I joined the Carrotspot project at its early stage and was responsible for designing an engaging UI for a complex HR platform. Despite the constraints of an existing developer-centric framework, I incrementally optimised usability, designed new features, and gamified key elements. After LUX MED acquired the platform, I redesigned the UI to align with their corporate identity and tackled significant market-specific adaptations. The most challenging aspects were working in a small team with minimal resources, lack of business analysis, and overcoming inherited usability issues. Through hard work, creativity, and persistence, I delivered a highly functional product ready for the next phase of growth.", 
+
         images: [
-               {src: "images/luxmed_1.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
-               {src: "images/luxmed_2.webp", alt: "Luxmed Platform", width: 496, height: 400}, 
-               {src: "images/luxmed_3.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
-               {src: "images/luxmed_4.webp", alt: "Luxmed Platform", width: 757, height: 400}, 
-               {src: "images/luxmed_5.webp", alt: "Luxmed Platform", width: 424, height: 400}, 
+               {src: "/images/luxmed_1.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
+               {src: "/images/luxmed_2.webp", alt: "Luxmed Platform", width: 496, height: 400}, 
+               {src: "/images/luxmed_3.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
+               {src: "/images/luxmed_4.webp", alt: "Luxmed Platform", width: 757, height: 400}, 
+               {src: "/images/luxmed_5.webp", alt: "Luxmed Platform", width: 424, height: 400}, 
         ],
         
     },
@@ -148,13 +155,14 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
             title: "Outcomes and Takeaways",
             description: "This project was a balancing act between innovation and sensitivity to the client’s comfort zone. Despite initial resistance, the new design proved highly effective, leading to smoother user flows and a more efficient system. The project reaffirmed my belief in the power of persistence, communication, and incremental change when dealing with large, legacy systems. Most importantly, it showcased my ability to manage complex projects involving multiple stakeholders, negotiate change, and deliver a product that both meets the client's needs and significantly improves the user experience."
         },
+        sliderSummary: "I helped Sustainable Brands modernise and consolidate their outdated, inconsistent system of multiple websites into a cohesive, user-friendly experience. The project involved navigating significant client resistance to change and unifying the work of different teams across many years. My role was to streamline the UX, improve the UI, and provide a more efficient, intuitive structure, ensuring consistency and a better user experience.",  
         images: [
-             {src: "images/sustainability_1.webp", alt: "Sustainable Brands", width: 655, height: 400}, 
-             {src: "images/sustainability_2.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
-             {src: "images/sustainability_3.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
-             {src: "images/sustainability_4.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
-             {src: "images/sustainability_5.webp", alt: "Sustainable Brands", width: 456, height: 400}, 
-             {src: "images/sustainability_6.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "/images/sustainability_1.webp", alt: "Sustainable Brands", width: 655, height: 400}, 
+             {src: "/images/sustainability_2.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "/images/sustainability_3.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "/images/sustainability_4.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
+             {src: "/images/sustainability_5.webp", alt: "Sustainable Brands", width: 456, height: 400}, 
+             {src: "/images/sustainability_6.webp", alt: "Sustainable Brands", width: 643, height: 400}, 
         ],
     }
 };

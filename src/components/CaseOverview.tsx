@@ -1,15 +1,18 @@
 import React from "react";
 import CaseStudyButton from "./CaseStudyButton";
-import { CaseStudyContent } from "@/content/caseStudyContent";
+import { CaseStudySection } from "@/content/caseStudyContent";
 import CaseOverviewStyle from "./CaseOverviewStyle.module.css";
 import classNames from "classnames";
 import CheckCircleIcon from "/public/svgs/check-circle.svg";
 import CirckeDotIcon from "/public/svgs/circle-dot.svg";
 
 interface CaseOverviewProps {
-  caseStudyContent: CaseStudyContent;
+  overview: CaseStudySection;
+  challenge: CaseStudySection;
+  approach: CaseStudySection;
+  solution: CaseStudySection;
+  outcomes: CaseStudySection;
   onClick: () => void;
-
 }
 
 const {
@@ -22,11 +25,12 @@ const {
 
 const CaseOverview: React.FC<CaseOverviewProps> = ({
   onClick,
-  caseStudyContent,
+  overview,
+  challenge,
+  approach,
+  solution,
+  outcomes,
 }) => {
-  const { overview, challenge, approach, solution, outcomes } =
-    caseStudyContent;
-
   const sections = [overview, challenge, approach, solution, outcomes];
 
   return (
@@ -43,7 +47,10 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
               {section.title}
               <CheckCircleIcon className={checkIconStyle} />
             </h2>
-            <p className={descriptionStyle}>{section.description}</p>
+            <p
+              className={descriptionStyle}
+              dangerouslySetInnerHTML={{ __html: section.description }}
+            ></p>
           </div>
         ))}
         <CirckeDotIcon className={dotIconStyle} />

@@ -8,6 +8,7 @@ import TabsNavigation from "./TabsNavigation";
 import FastForwardIcon from "/public/svgs/fast-forward.svg";
 import FolderOpenIcon from "/public/svgs/folder-open.svg";
 import CaseOverview from "./CaseOverview";
+import CaseGallery from "./CaseGallery";
 
 interface CaseStudyDrawerProps {
   isOpen: boolean;
@@ -38,7 +39,18 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
   onClose,
   caseStudyContent,
 }) => {
-  const { tag, title, subtitle } = caseStudyContent;
+  const {
+    tag,
+    title,
+    subtitle,
+    overview,
+    challenge,
+    approach,
+    solution,
+    outcomes,
+    sliderSummary,
+    images,
+  } = caseStudyContent;
 
   return (
     <>
@@ -71,14 +83,21 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
             <div className={titleStyle}>{title}</div>
             <div className={subtitleStyle}>{subtitle}</div>
           </div>
-
           <TabsNavigation tabs={tabs} isOpen={isOpen}>
-            <CaseOverview
-              caseStudyContent={caseStudyContent}
+            <CaseGallery
               onClick={onClose}
-            
+              images={images}
+              sliderSummary={sliderSummary}
+              isOpen={isOpen}
+            ></CaseGallery>
+            <CaseOverview
+              overview={overview}
+              challenge={challenge}
+              approach={approach}
+              solution={solution}
+              outcomes={outcomes}
+              onClick={onClose}
             ></CaseOverview>
-            <div>Pictures placeholder</div>
           </TabsNavigation>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import CaseStudyNavigationStyle from "./CaseStudyNavigationStyle.module.css";
 import { Tab } from "./CaseStudyDrawer";
@@ -22,6 +22,10 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
   const handleTabClick = (index: number) => {
     setActiveTab(index);
   };
+
+  useEffect(() => {
+    setActiveTab(0);
+  }, [isOpen]);
 
   return (
     <>
@@ -51,13 +55,18 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
           </button>
         ))}
       </div>
-      <div className="overflow-auto" ref={(el) => { if (isOpen && el) el.scrollTop = 0; }}>
+      <div
+        className="overflow-auto"
+        ref={(el) => {
+          if (isOpen && el) el.scrollTop = 0;
+        }}
+      >
         {children.map((child, index) => (
           <div
-        key={index}
-        className={classNames({ hidden: activeTab !== index })}
+            key={index}
+            className={classNames({ hidden: activeTab !== index })}
           >
-        {child}
+            {child}
           </div>
         ))}
       </div>
