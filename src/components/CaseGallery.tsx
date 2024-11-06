@@ -5,6 +5,7 @@ import CaseStudyButton from "./CaseStudyButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CaseGalleryStyle from "./CaseGalleryStyle.module.css";
 import classNames from "classnames";
+import GalleryNavButtons from "./GalleryNavButtons";
 import { Swiper as SwiperClass } from "swiper";
 
 // Import Swiper styles
@@ -38,14 +39,16 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
   return (
     <div
       className={classNames(
-        "w-[900px] p-8 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
+        "w-[900px] p-8 pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
         sectionStyle
       )}
     >
-      <p className={galleryDescriptionStyle}>{sliderSummary}</p>
+      <p className={classNames("pr-8", galleryDescriptionStyle)}>
+        {sliderSummary}
+      </p>
       <div className="h-[400px] max-w-full relative">
         <Swiper
-          spaceBetween={20}
+          spaceBetween={0}
           slidesPerView={"auto"}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -62,6 +65,7 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
               />
             </SwiperSlide>
           ))}
+          <GalleryNavButtons></GalleryNavButtons>
         </Swiper>
       </div>
       <div className="grow shrink basis-0 pb-4 flex-col justify-end items-start gap-2.5 flex">
