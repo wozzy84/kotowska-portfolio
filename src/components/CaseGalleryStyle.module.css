@@ -1,6 +1,7 @@
 .sectionStyle {
   background: var(--surface-bg-case-overview, #fff);
 }
+
 .galleryDescriptionStyle {
   color: var(--text-primary, #1c1c1c);
   font-size: var(--font-size-md, 16px);
@@ -12,6 +13,7 @@
 .gallerySlideStyle {
   max-width: fit-content;
   height: 400px;
+  margin-right: 20px;
 }
 
 .imageStyle {

@@ -65,7 +65,7 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
             containerStyle
           )}
         >
-          <div className="self-stretch  p-4 flex-col justify-start items-center gap-2 flex">
+          <div className="self-stretch p-4 flex-col justify-start items-center gap-2 flex">
             <div className="self-stretch justify-end items-center gap-2.5 inline-flex">
               <button className="w-6 h-6 rounded justify-center items-center flex">
                 <CloseCaseStudyIcon

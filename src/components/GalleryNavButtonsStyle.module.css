@@ -1,0 +1,26 @@
+.buttonStyle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+.disabledStyle {
+  opacity: 0.5;
+}
+
+.prevButtonStyle {
+  left: 8px;
+  top: calc(50% - 16px);
+  rotate: 180deg;
+}
+
+.nextButtonStyle {
+  right: 40px;
+  top: calc(50% - 16px);
+}
