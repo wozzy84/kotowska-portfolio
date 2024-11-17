@@ -21,6 +21,17 @@
 }
 
 .nextButtonStyle {
-  right: 40px;
   top: calc(50% - 16px);
+}
+
+@media (max-width: 649px) {
+  .nextButtonStyle {
+    left: calc(80vw - 40px);
+  }
+}
+
+@media (min-width: 650px) {
+  .nextButtonStyle {
+    right: 40px;
+  }
 }

@@ -36,7 +36,7 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
   return (
     <section
       className={classNames(
-        "w-[900px] p-8 rounded-bl-lg flex flex-col justify-start items-start",
+        "w-full p-8 rounded-bl-lg flex flex-col justify-start items-start",
         sectionStyle
       )}
     >

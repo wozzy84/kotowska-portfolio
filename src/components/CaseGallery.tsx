@@ -7,9 +7,11 @@ import CaseGalleryStyle from "./CaseGalleryStyle.module.css";
 import classNames from "classnames";
 import GalleryNavButtons from "./GalleryNavButtons";
 import { Swiper as SwiperClass } from "swiper";
+import { FreeMode } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/free-mode";
 import Image from "next/image";
 
 interface CaseGalleryProps {
@@ -19,8 +21,13 @@ interface CaseGalleryProps {
   isOpen: boolean;
 }
 
-const { sectionStyle, galleryDescriptionStyle, gallerySlideStyle, imageStyle } =
-  CaseGalleryStyle;
+const {
+  sectionStyle,
+  galleryDescriptionStyle,
+  gallerySlideStyle,
+  imageStyle,
+  swiperWrapperStyle,
+} = CaseGalleryStyle;
 
 const CaseGallery: React.FC<CaseGalleryProps> = ({
   sliderSummary,
@@ -39,7 +46,7 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
   return (
     <div
       className={classNames(
-        "w-[900px] p-8 pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
+        "w-full p-8 pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
         sectionStyle
       )}
     >
@@ -50,9 +57,13 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
         <Swiper
           spaceBetween={0}
           slidesPerView={"auto"}
+          freeMode={true}
+          centeredSlides={false}
+          modules={[FreeMode]}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
+          className={swiperWrapperStyle}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className={gallerySlideStyle}>

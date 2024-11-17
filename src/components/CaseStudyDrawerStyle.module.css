@@ -1,3 +1,36 @@
+.drawerStyle {
+  position: fixed;
+  height: 100%;
+  z-index: 10;
+}
+@media (max-width: 1023px) {
+  .drawerStyle {
+    bottom: 0;
+    left: 0;
+    --tw-translate-y: 100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  .isOpenStyle {
+    --tw-translate-y: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .drawerStyle {
+    top: 0;
+    right: 0;
+    --tw-translate-x: 100%;
+  }
+  .isOpenStyle {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
 .containerStyle {
   background: var(--surface-bg, #fafafa);
 }
