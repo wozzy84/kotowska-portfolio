@@ -23,14 +23,11 @@
 .nextButtonStyle {
   top: calc(50% - 16px);
 }
-
-@media (max-width: 649px) {
-  .nextButtonStyle {
-    left: calc(80vw - 40px);
-  }
+.nextButtonStyle {
+  right: 8px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 1024px) {
   .nextButtonStyle {
     right: 40px;
   }

@@ -55,7 +55,7 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
         ))}
         <CirckeDotIcon className={dotIconStyle} />
       </div>
-      <div className="pt-12 pb-4 flex-col justify-end items-start gap-2.5 flex">
+      <div className="w-[100%] pt-12 pb-4 flex-col justify-end items-start flex">
         <CaseStudyButton label="Close case overview" onClick={onClick} />
       </div>
     </section>

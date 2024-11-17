@@ -15,7 +15,7 @@ const CaseStudyButton: React.FC<CaseStudyButtonProps> = ({
   return (
     <button
       className={classNames(
-        "w-[223px] h-12 p-2 rounded-lg justify-center items-center gap-1 inline-flex",
+        "w-[100%] lg:w-[223px] h-12 p-2 rounded-lg justify-center items-center gap-1 inline-flex",
         buttonStyle
       )}
       onClick={onClick}
@@ -26,9 +26,3 @@ const CaseStudyButton: React.FC<CaseStudyButtonProps> = ({
 };
 
 export default CaseStudyButton;
-
-<div className="w-[223px] h-12 p-2 bg-[#555cf3] rounded-lg justify-center items-center gap-1 inline-flex">
-  <div className="text-center text-[#f2f5f7] text-sm font-semibold font-['Inter'] leading-tight">
-    Close case overview
-  </div>
-</div>;

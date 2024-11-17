@@ -30,7 +30,7 @@ const tabs: Tab[] = [
     icon: <FastForwardIcon />,
   },
   {
-    title: "Case Overview",
+    title: "Case Study",
     icon: <FolderOpenIcon />,
   },
 ];
@@ -83,8 +83,8 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
               </button>
             </div>
             <Tag label={tag} small />
-            <div className={titleStyle}>{title}</div>
-            <div className={subtitleStyle}>{subtitle}</div>
+            <h2 className={titleStyle}>{title}</h2>
+            <p className={subtitleStyle}>{subtitle}</p>
           </div>
           <TabsNavigation tabs={tabs} isOpen={isOpen}>
             <CaseGallery

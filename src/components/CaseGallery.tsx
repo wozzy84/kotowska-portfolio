@@ -46,11 +46,11 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
   return (
     <div
       className={classNames(
-        "w-full p-8 pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
+        "w-full p-8 lg:pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
         sectionStyle
       )}
     >
-      <p className={classNames("pr-8", galleryDescriptionStyle)}>
+      <p className={classNames("lg:pr-8", galleryDescriptionStyle)}>
         {sliderSummary}
       </p>
       <div className="h-[400px] max-w-full relative">
@@ -79,7 +79,7 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
           <GalleryNavButtons></GalleryNavButtons>
         </Swiper>
       </div>
-      <div className="grow shrink basis-0 pb-4 flex-col justify-end items-start gap-2.5 flex">
+      <div className="w-[100%] pt-12 pb-4 flex-col justify-end items-start flex">
         <CaseStudyButton label="Close case overview" onClick={onClick} />
       </div>
     </div>
