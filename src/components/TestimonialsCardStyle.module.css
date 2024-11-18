@@ -1,0 +1,9 @@
+.quoteStyle {
+  color: var(--text-tertiary, #a7adb1);
+  text-align: center;
+  font-family: var(--font-family-secondary, "Libre Bodoni");
+  font-size: var(--spacing-8, 64px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-3xl, 52px); /* 81.25% */
+  letter-spacing: -1.28px;
+}

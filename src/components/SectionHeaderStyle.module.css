@@ -6,7 +6,6 @@
   text-transform: uppercase;
 }
 
-
 .sectionTitleStyle {
   color: var(--text-primary, #1c1c1c);
   font-size: var(--font-size-3xl, 36px);
@@ -21,4 +20,7 @@
   font-weight: var(--font-weight-Medium, 500);
   line-height: var(--font-line-height-md, 20px); /* 125% */
   max-width: 890px;
+}
+.textInverseStyle {
+  color: var(--text-inverse, #fafafa);
 }

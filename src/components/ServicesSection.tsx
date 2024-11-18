@@ -48,7 +48,7 @@ const ServicesSection: React.FC = () => {
         description="I offer design services to help bring your digital projects to life, from initial concepts to final designs"
       ></SectionHeader>
 
-      <div className="container max-w-screen-xl  mx-auto flex self-stretch justify-center items-start gap-6 flex-wrap">
+      <div className="container max-w-screen-xl  mx-auto flex self-stretch justify-center items-start gap-6 flex-wrap p-4">
         {services.map((service, index) => (
           <ServicesCard key={index} {...service} />
         ))}
