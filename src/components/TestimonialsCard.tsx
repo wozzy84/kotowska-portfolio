@@ -2,35 +2,42 @@ import React from "react";
 import Image from "next/image";
 import { TestimonialContent } from "../content/testimonialsContent";
 import TestimonialsCardStyle from "./TestimonialsCardStyle.module.css";
+import classNames from "classnames";
 
 interface TestimonialCard {
   testimonial: TestimonialContent;
 }
 
-const { quoteStyle } = TestimonialsCardStyle;
+const { cardStyle, quoteStyle, descriptionStyle, nameStyle, jobStyle } =
+  TestimonialsCardStyle;
 
 const TestimonialsCard: React.FC<TestimonialCard> = ({ testimonial }) => {
   const { description, image, name, job } = testimonial;
 
   return (
-    <div className="w-[360px] h-[448px] px-8 py-10 bg-white rounded-2xl shadow flex-col justify-start items-center gap-4 inline-flex">
-      <div className={quoteStyle}>“</div>
-      <div className="self-stretch h-[206px] text-center text-[#5f6367] text-sm font-normal font-['Inter'] leading-[18px]">
-        {description}
-      </div>
-      <Image
-        width={48}
-        height={48}
-        className="rounded-full shadow"
-        src={image}
-        alt={name}
-      />
-      <div className="self-stretch h-9 flex-col justify-start items-center flex">
-        <div className="self-stretch text-center text-[#1c1c1c] text-sm font-semibold font-['Inter'] leading-[18px]">
-          {name}
+    <div
+      className={classNames(
+        "w-[360px] min-h-[466px] px-8 py-10 flex-col justify-between items-center inline-flex",
+        cardStyle
+      )}
+    >
+      <div>
+        <div className={quoteStyle}>“</div>
+        <div className={classNames("mb-4", descriptionStyle)}>
+          {description}
         </div>
-        <div className="self-stretch text-center text-[#a7adb1] text-sm font-normal font-['Inter'] leading-[18px]">
-          {job}
+      </div>
+      <div className="flex flex-col items-center">
+        <Image
+          width={48}
+          height={48}
+          className="rounded-full shadow mb-4"
+          src={image}
+          alt={name}
+        />
+        <div className="self-stretch flex-col justify-start items-center flex">
+          <div className={classNames(nameStyle)}>{name}</div>
+          <div className={classNames(jobStyle)}>{job}</div>
         </div>
       </div>
     </div>

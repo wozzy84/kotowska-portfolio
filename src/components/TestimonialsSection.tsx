@@ -16,7 +16,7 @@ const TestimonialsSection: React.FC = () => {
         description="Here's what my clients and team-mates have to say about working with me"
         textInverse
       ></SectionHeader>
-      <div className="container max-w-screen-xl  mx-auto flex self-stretch justify-center items-start gap-6 flex-wrap p-4">
+      <div className="container max-w-screen-xl  mx-auto flex self-stretch justify-center items-start gap-6 flex-wrap px-4">
         {testimonialsContent.map((testimonial, index) => (
           <TestimonialsCard key={index} testimonial={testimonial} />
         ))}

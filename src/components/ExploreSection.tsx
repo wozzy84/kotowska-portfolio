@@ -83,7 +83,7 @@ const ExploreSection: React.FC = () => {
         title="Explore My Work"
         description="I'm a firm believer in collaboration and transparency, working closely with clients and stakeholders to ensure that every project not only meets but exceeds expectations."
       ></SectionHeader>
-      <div className="flex flex-wrap justify-center items-center gap-6 p-4">
+      <div className="flex flex-wrap justify-center items-center gap-6 px-4">
         {exploreCardsContent.map((card, index) => (
           <PortfolioCard
             key={index}
