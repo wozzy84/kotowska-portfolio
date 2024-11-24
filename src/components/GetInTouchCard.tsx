@@ -6,6 +6,7 @@ import MailIcon from "/public/svgs/mail_small.svg";
 import PhoneIcon from "/public/svgs/phone.svg";
 import LinkedinIcon from "/public/svgs/linkedin.svg";
 import MapPinIcon from "/public/svgs/map-pin.svg";
+import GetInTouchCopyButton from "./GetInTouchCopyButton";
 
 const {
   cardStyle,
@@ -15,13 +16,15 @@ const {
   jobTitleStyle,
   pronounsStyle,
   contactDetailsStyle,
+  contactDetailsMobileStyle,
+  iconMobileStyle,
 } = GetInTouchCardStyle;
 
 const GetInTouchCard: React.FC = () => {
   return (
     <div
       className={classNames(
-        "w-[670px] flex-col justify-start items-center inline-flex mb-16 mt-44",
+        "w-[670px] flex-col justify-start items-center inline-flex mb-16 mt-44 overflow-hidden",
         cardStyle
       )}
     >
@@ -39,7 +42,7 @@ const GetInTouchCard: React.FC = () => {
           alt="Ewa Kotowska"
         />
       </div>
-      <div className="self-stretch px-9 pt-24 pb-9 flex-col justify-start items-center gap-12 flex">
+      <div className="self-stretch px-4 lg:px-9 pt-24 pb-9 flex-col justify-start items-center gap-12 flex">
         <div className="self-stretch flex-col justify-start items-center gap-1 flex">
           <h3 className={headerStyle}>Ewa Kotowska</h3>
           <p className={jobTitleStyle}>Visual Designer, UI/UX Specialist</p>
@@ -87,37 +90,31 @@ const GetInTouchCard: React.FC = () => {
         {/* Mobile */}
         <div className="inline-flex lg:hidden w-full flex-col justify-start items-start gap-4">
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
-            <div className="h-6 justify-start items-center gap-2 flex">
-              <div className="w-[18px] h-[18px] px-[1.50px] py-[3px] justify-center items-center flex" />
-              <div className="text-center text-[#1c1c1c] text-lg font-medium font-['Inter'] leading-normal">
+            <p className="h-6 justify-start items-center gap-2 flex">
+              <MailIcon height={18} width={18} class={iconMobileStyle} />
+              <span className={contactDetailsMobileStyle}>
                 ewa@kotowska.com
-              </div>
-            </div>
-            <div className="px-4 py-2 bg-[#f2f5f7] rounded-[360px] justify-end items-center gap-0.5 flex">
-              <div className="w-[18px] h-[18px] p-[1.50px] justify-center items-center flex" />
-            </div>
+              </span>
+            </p>
+            <GetInTouchCopyButton textToCopy="ewa@kotowska.com" />
           </div>
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
-            <div className="h-6 justify-start items-center gap-2 flex">
-              <div className="w-[18px] h-[18px] pl-[1.58px] pr-[1.50px] pt-[1.50px] pb-[1.55px] justify-center items-center flex" />
-              <div className="text-center text-[#1c1c1c] text-lg font-medium font-['Inter'] leading-normal">
-                +48792562422
-              </div>
-            </div>
-            <div className="px-4 py-2 bg-[#f2f5f7] rounded-[360px] justify-end items-center gap-0.5 flex">
-              <div className="w-[18px] h-[18px] p-[1.50px] justify-center items-center flex" />
-            </div>
+            <p className="h-6 justify-start items-center gap-2 flex">
+              <PhoneIcon height={18} width={18} class={iconMobileStyle} />
+              <span className={contactDetailsMobileStyle}>+48792562422</span>
+            </p>
+            <GetInTouchCopyButton textToCopy="+48792562422" />
           </div>
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
-            <div className="h-6 justify-start items-center gap-2 flex">
-              <div className="w-[18px] h-[18px] px-[1.50px] pt-[1.50px] pb-[2.25px] justify-center items-center flex" />
-              <div className="text-center text-[#1c1c1c] text-lg font-medium font-['Inter'] leading-normal">
+            <p className="h-6 justify-start items-center gap-2 flex truncate">
+              <LinkedinIcon height={18} width={18} class={iconMobileStyle} />
+              <span
+                className={classNames(contactDetailsMobileStyle, "truncate")}
+              >
                 linkedin.com/in/ewakotowska
-              </div>
-            </div>
-            <div className="px-4 py-2 bg-[#f2f5f7] rounded-[360px] justify-end items-center gap-0.5 flex">
-              <div className="w-[18px] h-[18px] p-[1.50px] justify-center items-center flex" />
-            </div>
+              </span>
+            </p>
+            <GetInTouchCopyButton textToCopy="https://www.linkedin.com/in/ewakotowska/" />
           </div>
         </div>
       </div>

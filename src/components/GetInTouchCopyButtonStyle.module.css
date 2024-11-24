@@ -1,0 +1,7 @@
+.buttonStyle {
+  background: var(--surface-bg-module, #f2f5f7);
+}
+
+.iconStyle {
+  color: var(--text-tertiary);
+}

@@ -1,5 +1,4 @@
 .cardStyle {
-  position: relative;
   border-radius: var(--radius-md, 16px);
   background: var(--surface-bg-card, #fff);
   box-shadow: 0px 30px 25px 0px #f2f2f2;
@@ -39,11 +38,22 @@
 }
 
 .contactDetailsStyle {
-  overflow: hidden;
   color: var(--text-secondary, #5f6367);
   text-align: center;
   text-overflow: ellipsis;
   font-size: var(--font-size-lg, 18px);
   font-style: normal;
   font-weight: var(--font-weight-Medium, 500);
+}
+
+.contactDetailsMobileStyle {
+  color: var(--text-primary, #1c1c1c);
+  text-align: center;
+  font-size: var(--font-size-lg, 18px);
+  font-weight: var(--font-weight-Medium, 500);
+  line-height: 24px; /* 133.333% */
+}
+
+.iconMobileStyle {
+  color: var(--colour-basic-purple, #a584f3);
 }
