@@ -37,14 +37,6 @@
   line-height: var(--font-line-height-sm, 18px); /* 150% */
 }
 
-.contactDetailsStyle {
-  color: var(--text-secondary, #5f6367);
-  text-align: center;
-  text-overflow: ellipsis;
-  font-size: var(--font-size-lg, 18px);
-  font-style: normal;
-  font-weight: var(--font-weight-Medium, 500);
-}
 
 .contactDetailsMobileStyle {
   color: var(--text-primary, #1c1c1c);

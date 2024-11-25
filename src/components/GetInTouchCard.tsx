@@ -5,8 +5,9 @@ import GetInTouchCardStyle from "./GetInTouchCardStyle.module.css";
 import MailIcon from "/public/svgs/mail_small.svg";
 import PhoneIcon from "/public/svgs/phone.svg";
 import LinkedinIcon from "/public/svgs/linkedin.svg";
-import MapPinIcon from "/public/svgs/map-pin.svg";
-import GetInTouchCopyButton from "./GetInTouchCopyButton";
+import GetInTouchCopyButtonDesktop from "./GetInTouchCopyButtonDesktop";
+import GetInTouchCopyButtonMobile from "./GetInTouchCopyButtonMobile";
+import GetInTouchMapLink from "./GetInTouchMapLink";
 
 const {
   cardStyle,
@@ -15,7 +16,7 @@ const {
   headerStyle,
   jobTitleStyle,
   pronounsStyle,
-  contactDetailsStyle,
+
   contactDetailsMobileStyle,
   iconMobileStyle,
 } = GetInTouchCardStyle;
@@ -50,42 +51,27 @@ const GetInTouchCard: React.FC = () => {
         </div>
         {/* Desktop */}
         <div className="hidden lg:inline-flex self-stretch justify-between items-end">
-          <div className="pr-[84px] flex-col justify-start items-start inline-flex">
-            <p className="p-2 rounded-lg justify-start items-center gap-2 inline-flex">
-              <PhoneIcon
-                height={18}
-                width={18}
-                style={{ color: "var(--text-tertiary)" }}
-              />
-              <span className={contactDetailsStyle}>+48792562422</span>
-            </p>
-            <p className="p-2 rounded-lg justify-start items-center gap-2 inline-flex">
-              <MailIcon
-                height={18}
-                width={18}
-                style={{ color: "var(--text-tertiary)" }}
-              />
-              <span className={contactDetailsStyle}>ewa@kotowska.com</span>
-            </p>
-            <p className="p-2 rounded-lg justify-start items-center gap-2 inline-flex">
-              <LinkedinIcon
-                height={18}
-                width={18}
-                style={{ color: "var(--text-tertiary)" }}
-              />
-              <span className={contactDetailsStyle}>
-                linkedin.com/in/ewakotowska
-              </span>
-            </p>
+          <div className="flex-col justify-start items-start inline-flex">
+            <GetInTouchCopyButtonDesktop
+              text="+48792562422"
+              textToCopy="+48792562422"
+            >
+              <PhoneIcon height={18} width={18} />
+            </GetInTouchCopyButtonDesktop>
+            <GetInTouchCopyButtonDesktop
+              text="ewa@kotowska.com"
+              textToCopy="ewa@kotowska.com"
+            >
+              <MailIcon height={18} width={18} />
+            </GetInTouchCopyButtonDesktop>
+            <GetInTouchCopyButtonDesktop
+              text="linkedin.com/in/ewakotowska"
+              textToCopy="https://www.linkedin.com/in/ewakotowska/"
+            >
+              <LinkedinIcon height={18} width={18} />
+            </GetInTouchCopyButtonDesktop>
           </div>
-          <p className="p-2 rounded-lg justify-start items-center gap-2 flex">
-            <span className={contactDetailsStyle}>Warsaw, Poland</span>
-            <MapPinIcon
-              height={18}
-              width={18}
-              style={{ color: "var(--text-tertiary)" }}
-            />
-          </p>
+          <GetInTouchMapLink />
         </div>
         {/* Mobile */}
         <div className="inline-flex lg:hidden w-full flex-col justify-start items-start gap-4">
@@ -96,14 +82,14 @@ const GetInTouchCard: React.FC = () => {
                 ewa@kotowska.com
               </span>
             </p>
-            <GetInTouchCopyButton textToCopy="ewa@kotowska.com" />
+            <GetInTouchCopyButtonMobile textToCopy="ewa@kotowska.com" />
           </div>
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
             <p className="h-6 justify-start items-center gap-2 flex">
               <PhoneIcon height={18} width={18} class={iconMobileStyle} />
               <span className={contactDetailsMobileStyle}>+48792562422</span>
             </p>
-            <GetInTouchCopyButton textToCopy="+48792562422" />
+            <GetInTouchCopyButtonMobile textToCopy="+48792562422" />
           </div>
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
             <p className="h-6 justify-start items-center gap-2 flex truncate">
@@ -114,7 +100,7 @@ const GetInTouchCard: React.FC = () => {
                 linkedin.com/in/ewakotowska
               </span>
             </p>
-            <GetInTouchCopyButton textToCopy="https://www.linkedin.com/in/ewakotowska/" />
+            <GetInTouchCopyButtonMobile textToCopy="https://www.linkedin.com/in/ewakotowska/" />
           </div>
         </div>
       </div>

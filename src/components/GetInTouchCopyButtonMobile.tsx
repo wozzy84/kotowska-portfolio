@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import CopyIcon from "/public/svgs/copy.svg";
 import CheckIcon from "/public/svgs/check.svg";
 import classNames from "classnames";
@@ -11,7 +10,9 @@ interface CopyButtonProps {
 
 const { buttonStyle, iconStyle } = GetInTouchCopyButtonStyle;
 
-const GetInTouchCopyButton: React.FC<CopyButtonProps> = ({ textToCopy }) => {
+const GetInTouchCopyButtonMobile: React.FC<CopyButtonProps> = ({
+  textToCopy,
+}) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -39,4 +40,4 @@ const GetInTouchCopyButton: React.FC<CopyButtonProps> = ({ textToCopy }) => {
   );
 };
 
-export default GetInTouchCopyButton;
+export default GetInTouchCopyButtonMobile;
