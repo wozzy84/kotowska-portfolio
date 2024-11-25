@@ -16,7 +16,8 @@ interface CaseStudyDrawerProps {
   caseStudyContent: CaseStudyContent;
 }
 
-const { containerStyle, titleStyle, subtitleStyle } = CaseStudyDrawerStyle;
+const { drawerStyle, isOpenStyle, containerStyle, titleStyle, subtitleStyle } =
+  CaseStudyDrawerStyle;
 
 export interface Tab {
   title: string;
@@ -29,7 +30,7 @@ const tabs: Tab[] = [
     icon: <FastForwardIcon />,
   },
   {
-    title: "Case Overview",
+    title: "Case Study",
     icon: <FolderOpenIcon />,
   },
 ];
@@ -55,13 +56,15 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
   return (
     <>
       <div
-        className={`fixed z-10 top-0 right-0 h-[100vh] transition-transform duration-300 transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={classNames(
+          drawerStyle,
+          "transition-transform duration-300 transform",
+          { [isOpenStyle]: isOpen }
+        )}
       >
         <div
           className={classNames(
-            "w-[900px] h-full flex-col rounded-tl-lg justify-start items-start inline-flex relative overflow-hidden",
+            "w-full lg:w-[900px] h-full flex-col lg:rounded-tl-lg justify-start items-start inline-flex relative overflow-hidden",
             containerStyle
           )}
         >
@@ -80,8 +83,8 @@ const CaseStudyDrawer: React.FC<CaseStudyDrawerProps> = ({
               </button>
             </div>
             <Tag label={tag} small />
-            <div className={titleStyle}>{title}</div>
-            <div className={subtitleStyle}>{subtitle}</div>
+            <h2 className={titleStyle}>{title}</h2>
+            <p className={subtitleStyle}>{subtitle}</p>
           </div>
           <TabsNavigation tabs={tabs} isOpen={isOpen}>
             <CaseGallery

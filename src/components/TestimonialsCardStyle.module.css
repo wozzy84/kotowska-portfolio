@@ -1,0 +1,43 @@
+.cardStyle {
+  border-radius: var(--radius-md, 16px);
+  background: var(--surface-bg-card, #fff);
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.06);
+}
+
+.quoteStyle {
+  color: var(--text-tertiary, #a7adb1);
+  text-align: center;
+  font-family: var(--font-family-secondary, "Libre Bodoni");
+  font-size: var(--spacing-8, 64px);
+  font-weight: var(--font-weight-Bold, 700);
+  line-height: var(--font-line-height-3xl, 52px); /* 81.25% */
+  letter-spacing: -1.28px;
+}
+
+.descriptionStyle {
+  color: var(--text-secondary, #5f6367);
+  font-size: var(--font-size-sm, 14px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-lg, 18px); /* 128.571% */
+  text-align: center;
+  letter-spacing: -0.14px;
+}
+
+.nameStyle {
+  color: var(--text-primary, #1c1c1c);
+  text-align: center;
+  font-size: var(--font-size-sm, 14px);
+  font-weight: var(--font-weight-SemiBold, 600);
+  line-height: var(--font-size-lg, 18px); /* 128.571% */
+  letter-spacing: -0.14px;
+}
+
+.jobStyle {
+  white-space: pre-line;
+  color: var(--text-tertiary, #a7adb1);
+  text-align: center;
+  font-size: var(--font-size-sm, 14px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-lg, 18px); /* 128.571% */
+  letter-spacing: -0.14px;
+}

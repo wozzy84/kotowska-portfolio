@@ -1,0 +1,32 @@
+.mapLinkStyle:hover {
+  background: var(--surface-bg-module, #f2f5f7);
+}
+
+.contactDetailsStyle {
+  color: var(--text-secondary, #5f6367);
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-lg, 18px);
+  font-style: normal;
+  font-weight: var(--font-weight-Medium, 500);
+}
+
+.externalIconStyle {
+  color: var(--text-tertiary, #a7adb1);
+  display: none;
+}
+.mapPinIconStyle {
+  color: var(--text-tertiary, #a7adb1);
+}
+
+.mapLinkStyle:hover .contactDetailsStyle {
+  color: var(--text-primary, #202124);
+}
+
+.mapLinkStyle:hover .mapPinIconStyle {
+  color: var(--colour-basic-purple, #a584f3);
+}
+
+.mapLinkStyle:hover .externalIconStyle {
+  display: block;
+}

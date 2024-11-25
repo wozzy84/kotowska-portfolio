@@ -1,0 +1,11 @@
+.sectionStyle {
+  background: var(--surface-bg-module, #f2f5f7);
+}
+
+.sectionBackgroundStyle {
+  background-image: url("/images/module_contact.webp");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 20%;
+  text-align: center;
+}

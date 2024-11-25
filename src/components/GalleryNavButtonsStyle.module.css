@@ -21,6 +21,14 @@
 }
 
 .nextButtonStyle {
-  right: 40px;
   top: calc(50% - 16px);
+}
+.nextButtonStyle {
+  right: 8px;
+}
+
+@media (min-width: 1024px) {
+  .nextButtonStyle {
+    right: 40px;
+  }
 }

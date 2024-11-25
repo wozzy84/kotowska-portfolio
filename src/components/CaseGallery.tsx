@@ -7,9 +7,11 @@ import CaseGalleryStyle from "./CaseGalleryStyle.module.css";
 import classNames from "classnames";
 import GalleryNavButtons from "./GalleryNavButtons";
 import { Swiper as SwiperClass } from "swiper";
+import { FreeMode } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/free-mode";
 import Image from "next/image";
 
 interface CaseGalleryProps {
@@ -19,8 +21,13 @@ interface CaseGalleryProps {
   isOpen: boolean;
 }
 
-const { sectionStyle, galleryDescriptionStyle, gallerySlideStyle, imageStyle } =
-  CaseGalleryStyle;
+const {
+  sectionStyle,
+  galleryDescriptionStyle,
+  gallerySlideStyle,
+  imageStyle,
+  swiperWrapperStyle,
+} = CaseGalleryStyle;
 
 const CaseGallery: React.FC<CaseGalleryProps> = ({
   sliderSummary,
@@ -39,20 +46,24 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
   return (
     <div
       className={classNames(
-        "w-[900px] p-8 pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
+        "w-full p-8 lg:pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
         sectionStyle
       )}
     >
-      <p className={classNames("pr-8", galleryDescriptionStyle)}>
+      <p className={classNames("lg:pr-8", galleryDescriptionStyle)}>
         {sliderSummary}
       </p>
       <div className="h-[400px] max-w-full relative">
         <Swiper
           spaceBetween={0}
           slidesPerView={"auto"}
+          freeMode={true}
+          centeredSlides={false}
+          modules={[FreeMode]}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
+          className={swiperWrapperStyle}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className={gallerySlideStyle}>
@@ -68,7 +79,7 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
           <GalleryNavButtons></GalleryNavButtons>
         </Swiper>
       </div>
-      <div className="grow shrink basis-0 pb-4 flex-col justify-end items-start gap-2.5 flex">
+      <div className="w-[100%] pt-12 pb-4 flex-col justify-end items-start flex">
         <CaseStudyButton label="Close case overview" onClick={onClick} />
       </div>
     </div>
