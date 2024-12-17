@@ -29,5 +29,5 @@ const GetInTouchSection: React.FC = () => {
     </section>
   );
 };
-``;
+
 export default GetInTouchSection;
