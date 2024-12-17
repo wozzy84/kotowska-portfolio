@@ -9,6 +9,7 @@
   font-size: var(--font-size-lg, 18px);
   font-style: normal;
   font-weight: var(--font-weight-Medium, 500);
+  line-height: 24px;
 }
 .infoIconStyle {
   color: var(--text-tertiary, #a7adb1);
