@@ -43,7 +43,7 @@ const GetInTouchCard: React.FC = () => {
           alt="Ewa Kotowska"
         />
       </div>
-      <div className="self-stretch px-4 lg:px-9 pt-24 pb-9 flex-col justify-start items-center gap-12 flex">
+      <div className="self-stretch px-4 lg:px-9 pt-24 pb-9 flex-col justify-start items-center gap-[48px] flex">
         <div className="self-stretch flex-col justify-start items-center gap-1 flex">
           <h3 className={headerStyle}>Ewa Kotowska</h3>
           <p className={jobTitleStyle}>Visual Designer, UI/UX Specialist</p>
@@ -77,7 +77,7 @@ const GetInTouchCard: React.FC = () => {
         <div className="inline-flex lg:hidden w-full flex-col justify-start items-start gap-4">
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
             <p className="h-6 justify-start items-center gap-2 flex">
-              <MailIcon height={18} width={18} class={iconMobileStyle} />
+              <MailIcon height={18} width={18} className={iconMobileStyle} />
               <span className={contactDetailsMobileStyle}>
                 ewa@kotowska.com
               </span>
@@ -86,14 +86,18 @@ const GetInTouchCard: React.FC = () => {
           </div>
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
             <p className="h-6 justify-start items-center gap-2 flex">
-              <PhoneIcon height={18} width={18} class={iconMobileStyle} />
+              <PhoneIcon height={18} width={18} className={iconMobileStyle} />
               <span className={contactDetailsMobileStyle}>+48792562422</span>
             </p>
             <GetInTouchCopyButtonMobile textToCopy="+48792562422" />
           </div>
           <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
             <p className="h-6 justify-start items-center gap-2 flex truncate">
-              <LinkedinIcon height={18} width={18} class={iconMobileStyle} />
+              <LinkedinIcon
+                height={18}
+                width={18}
+                className={iconMobileStyle}
+              />
               <span
                 className={classNames(contactDetailsMobileStyle, "truncate")}
               >

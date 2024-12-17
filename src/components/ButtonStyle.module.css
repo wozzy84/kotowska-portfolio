@@ -17,6 +17,10 @@
   border: 2px solid #49567b;
 }
 
+.block {
+  width: 100%;
+}
+
 .button:hover {
   background: rgba(250, 250, 250, 0.01);
   box-shadow: 0px 0px 60px 0px rgba(122, 33, 237, 0.08) inset,
