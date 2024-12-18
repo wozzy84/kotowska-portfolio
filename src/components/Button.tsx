@@ -7,15 +7,23 @@ interface ButtonProps {
   label: string;
   solid?: boolean;
   block?: boolean;
+  className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, label, solid, block }) => {
+const Button: React.FC<ButtonProps> = ({
+  onClick,
+  label,
+  solid,
+  block,
+  className,
+}) => {
   return (
     <button
       className={classNames(ButtonStyle.button, {
         [ButtonStyle.solid]: solid,
         [ButtonStyle.block]: block,
         button: true,
+        [className as string]: className,
       })}
       onClick={onClick}
     >

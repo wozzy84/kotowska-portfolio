@@ -17,7 +17,11 @@
   font-weight: 600;
   line-height: var(--font-size-xl, 24px); /* 133.333% */
   letter-spacing: -0.18px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+}
+
+.submitButton {
+  margin-top: 8px;
 }
 
 .inputsStyle {
@@ -41,8 +45,12 @@
   letter-spacing: -0.14px;
   width: 100%;
   outline: none;
-  margin-bottom: 8px;
+  margin-top: 8px;
   border: 2px solid var(--surface-bg-module, #f2f5f7);
+}
+
+.inputsStyle input {
+  padding-right: 56px;
 }
 
 .inputsStyle textarea {
@@ -64,7 +72,7 @@
 .inputsStyle label {
   position: absolute;
   opacity: 0.8;
-  top: 22px;
+  top: 30px;
   left: 16px;
   line-height: 18px;
   border-radius: 25px;
@@ -82,26 +90,85 @@
 .inputsStyle input:not(:placeholder-shown) + label,
 .inputsStyle textarea:focus + label,
 .inputsStyle textarea:not(:placeholder-shown) + label {
-  top: 0;
+  top: 8px;
   left: 12px;
   opacity: 1;
-  transform: translateY(-50%) scale(0.85);
+  transform: translateY(-50%);
+  font-size: var(--font-size-xs, 12px);
   color: var(--colour-basic-purple, #a584f3);
   background: var(--surface-bg-card, #fff);
 }
 
 .inputsStyle.error input,
 .inputsStyle.error textarea {
-  border: 2px solid var(--colour-error, #ff0000);
+  border: 2px solid var(--feedback-error, #ea3a3d);
 }
 
 .inputsStyle.error label {
-  color: var(--colour-error, #ff0000);
+  color: var(--feedback-error, #ea3a3d);
 }
 
 .inputsStyle.error input:focus + label,
 .inputsStyle.error input:not(:placeholder-shown) + label,
 .inputsStyle.error textarea:focus + label,
 .inputsStyle.error textarea:not(:placeholder-shown) + label {
-  color: var(--colour-error, #ff0000);
+  color: var(--feedback-error, #ea3a3d);
+}
+
+.valid.inputsStyle input:not(:focus),
+.valid.inputsStyle textarea:not(:focus) {
+  border-radius: 8px;
+  border: 1px solid var(--border-basic, #dee4e9);
+  background: var(--surface-bg, #fafafa);
+}
+
+.valid.inputsStyle input:not(:focus) + label,
+.valid.inputsStyle textarea:not(:focus) + label {
+  color: var(--text-secondary, #5f6367);
+}
+
+/* Pseudo-element after input when focused */
+
+.contactIconStyle {
+  opacity: 0;
+  position: absolute;
+  color: var(--colour-basic-purple, #a584f3);
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 20px;
+  transition: all 0.2s ease;
+}
+
+.emailInputContainer:focus-within:not(.inputsStyle.error) .contactIconStyle {
+  opacity: 1;
+}
+
+.checkIconStyle {
+  opacity: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 20px;
+  transition: all 0.2s ease;
+}
+
+.valid .checkIconStyle {
+  opacity: 1;
+}
+
+.errorIconStyle {
+  color: var(--feedback-error, #ea3a3d);
+  opacity: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 20px;
+  transition: all 0.2s ease;
+}
+
+.error .errorIconStyle {
+  opacity: 1;
 }
