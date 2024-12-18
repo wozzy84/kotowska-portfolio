@@ -77,6 +77,10 @@
   --accent-primary: var(--colour-basic-indigo);
   --text-accent-button: var(--colour-slate-200);
   --surface-bg-case-overview: var(--colour-basic-true-white);
+  --feedback-success: var(--colour-basic-green);
+  --feedback-error: var(--colour-basic-red);
+  --feedback-info: var(--colour-basic-blue);
+  --feedback-warning: var(--colour-basic-orange);
 }
 
 @media (prefers-color-scheme: dark) {
