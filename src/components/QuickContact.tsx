@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import QuickContactStyle from "./QuickContactStyle.module.css";
 import Button from "./Button";
@@ -6,6 +6,7 @@ import ErrorChip from "./ErrorChip";
 import ContactIcon from "/public/svgs/contact.svg";
 import CheckIcon from "/public/svgs/check_24.svg";
 import ErrorIcon from "/public/svgs/close.svg";
+import Image from "next/image";
 
 const {
   cardStyle,
@@ -19,7 +20,20 @@ const {
   contactIconStyle,
   checkIconStyle,
   errorIconStyle,
+  envelopeStyle,
+  envelopeStyleSent,
 } = QuickContactStyle;
+
+const imageSources = {
+  light: { src: "/images/envelope_light_closed.webp", width: 122, height: 102 },
+  lightOpen: {
+    src: "/images/envelope_light_open.webp",
+    width: 121,
+    height: 129,
+  },
+  dark: { src: "/images/envelope_dark_closed.webp", width: 122, height: 99 },
+  darkOpen: { src: "/images/envelope_dark_open.webp", width: 121, height: 127 },
+};
 
 const QuickContact: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -27,6 +41,34 @@ const QuickContact: React.FC = () => {
   const [emailError, setEmailError] = useState(false);
   const [messageError, setMessageError] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [envelopeSrc, setEnvelopeSrc] = useState(imageSources.light);
+  const [messageSent, setMessageSent] = useState(false);
+
+  useEffect(() => {
+    console.log("useEffect", messageSent);
+    const imageSourceLight = messageSent
+      ? imageSources.lightOpen
+      : imageSources.light;
+    const imageSourceDark = messageSent
+      ? imageSources.darkOpen
+      : imageSources.dark;
+
+    const updateEnvelopeSrc = (e: MediaQueryListEvent) => {
+      setEnvelopeSrc(e.matches ? imageSourceLight : imageSourceDark);
+    };
+
+    const darkModeMediaQuery = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+    setEnvelopeSrc(
+      darkModeMediaQuery.matches ? imageSourceDark : imageSourceLight
+    );
+    darkModeMediaQuery.addEventListener("change", updateEnvelopeSrc);
+
+    return () => {
+      darkModeMediaQuery.removeEventListener("change", updateEnvelopeSrc);
+    };
+  }, [messageSent]);
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -53,6 +95,7 @@ const QuickContact: React.FC = () => {
 
     if (!hasError) {
       console.log("send");
+      setMessageSent(true);
     }
   };
 
@@ -77,11 +120,21 @@ const QuickContact: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[512px] pb-16 flex-col justify-start items-end inline-flex text-start">
+    <div className="max-w-[512px] pb-16 flex-col justify-start items-end inline-flex lg:text-start relative">
+      <Image
+        className={classNames({
+          [envelopeStyle]: true,
+          [envelopeStyleSent]: messageSent,
+        })}
+        alt="envelope"
+        src={envelopeSrc}
+        width={envelopeSrc.width}
+        height={envelopeSrc.height}
+      />
       <div
         className={classNames(
           cardStyle,
-          "self-stretch px-9 py-8 rounded-2xl flex-col justify-start items-center flex"
+          "self-stretch px-3 lg:px-9 py-8 rounded-2xl flex-col justify-center lg:justify-start items-center flex"
         )}
       >
         <h3 className={headerTextStyle}>Quick contact</h3>

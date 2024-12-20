@@ -31,7 +31,7 @@ const GetInTouchCopyButtonDesktop: React.FC<CopyButtonProps> = ({
   return (
     <button
       className={classNames(
-        "p-2 rounded-lg justify-start items-center gap-2 inline-flex",
+        "p-2 rounded-lg justify-start items-center gap-2 flex",
         buttonStyle
       )}
       onClick={handleCopy}

@@ -11,7 +11,7 @@ const ErrorChip: React.FC<ErrorChipProps> = ({ message }) => {
       <div className="self-stretch py-0.5 justify-center items-start flex">
         <ErrorIcon />
       </div>
-      <div className="grow shrink basis-0 text-[#ea3a3d] text-[13px] font-normal font-['Source Sans Pro'] leading-tight">
+      <div className="grow shrink basis-0 text-[#ea3a3d] text-[13px] leading-tight">
         {message}
       </div>
     </div>
