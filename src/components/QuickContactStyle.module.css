@@ -1,6 +1,7 @@
 .cardStyle {
   background: var(--surface-bg-card, #fff);
   box-shadow: 0px 30px 25px 0px #f2f2f2;
+  min-height: 382px;
 }
 .headerTextStyle {
   width: 100%;
@@ -86,7 +87,7 @@
 .inputsStyle label {
   position: absolute;
   opacity: 0.8;
-  top: 34px;
+  top: 24px;
   left: 16px;
   line-height: 18px;
   border-radius: 25px;
@@ -104,7 +105,7 @@
 .inputsStyle input:not(:placeholder-shown) + label,
 .inputsStyle textarea:focus + label,
 .inputsStyle textarea:not(:placeholder-shown) + label {
-  top: 10px;
+  top: 1px;
   left: 12px;
   opacity: 1;
   transform: translateY(-50%);
@@ -164,7 +165,7 @@
   width: 24px;
   height: 24px;
   right: 16px;
-  top: 20px;
+  top: 12px;
   transition: all 0.2s ease;
 }
 
@@ -178,7 +179,7 @@
   width: 24px;
   height: 24px;
   right: 16px;
-  top: 22px;
+  top: 14px;
   transition: all 0.2s ease;
 }
 
@@ -193,7 +194,7 @@
   width: 24px;
   height: 24px;
   right: 16px;
-  top: 22px;
+  top: 14px;
   transition: all 0.2s ease;
 }
 
@@ -220,4 +221,29 @@
   .envelopeStyleSent {
     top: -94px;
   }
+}
+.formContainerStyle {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageSendTextStyle {
+  color: var(--text-secondary, #5f6367);
+  text-align: center;
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
+}
+
+.messageSendEmailStyle {
+  color: var(--accent-primary, #555cf3);
+  font-family: var(--font-family-primary, Inter);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
 }
