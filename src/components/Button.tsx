@@ -8,6 +8,8 @@ interface ButtonProps {
   solid?: boolean;
   block?: boolean;
   className?: string;
+  type?: "button" | "submit" | "reset";
+  name?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,6 +18,8 @@ const Button: React.FC<ButtonProps> = ({
   solid,
   block,
   className,
+  type,
+  name,
 }) => {
   return (
     <button
@@ -24,6 +28,8 @@ const Button: React.FC<ButtonProps> = ({
         [ButtonStyle.block]: block,
         button: true,
         [className as string]: className,
+        type: type || "button",
+        name: name || "button",
       })}
       onClick={onClick}
     >

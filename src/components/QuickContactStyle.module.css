@@ -1,6 +1,7 @@
 .cardStyle {
   background: var(--surface-bg-card, #fff);
   box-shadow: 0px 30px 25px 0px #f2f2f2;
+  min-height: 382px;
 }
 .headerTextStyle {
   width: 100%;
@@ -21,7 +22,7 @@
 }
 
 .submitButton {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .inputsStyle {
@@ -45,8 +46,21 @@
   letter-spacing: -0.14px;
   width: 100%;
   outline: none;
-  margin-top: 8px;
-  border: 2px solid var(--surface-bg-module, #f2f5f7);
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--surface-bg-module, #f2f5f7);
+}
+
+.inputsStyle input:hover,
+.inputsStyle textarea:hover {
+  border-radius: 8px;
+  border: 1px solid var(--border-basic, #dee4e9);
+  background: var(--surface-bg-module, #f2f5f7);
+  color: var(--text-primary, #1c1c1c);
+}
+.inputsStyle input:hover + label,
+.inputsStyle textarea:hover + label {
+  color: var(--text-primary, #1c1c1c);
 }
 
 .inputsStyle input {
@@ -66,13 +80,14 @@
 .inputsStyle input:focus,
 .inputsStyle textarea:focus {
   border: 2px solid var(--colour-basic-purple, #a584f3);
-  background: var(--surface-bg-card, #fff);
+  background: var(--surface-bg, #fafafa);
+  color: var(--text-primary, #1c1c1c);
 }
 
 .inputsStyle label {
   position: absolute;
   opacity: 0.8;
-  top: 30px;
+  top: 24px;
   left: 16px;
   line-height: 18px;
   border-radius: 25px;
@@ -90,29 +105,35 @@
 .inputsStyle input:not(:placeholder-shown) + label,
 .inputsStyle textarea:focus + label,
 .inputsStyle textarea:not(:placeholder-shown) + label {
-  top: 8px;
+  top: 1px;
   left: 12px;
   opacity: 1;
   transform: translateY(-50%);
   font-size: var(--font-size-xs, 12px);
   color: var(--colour-basic-purple, #a584f3);
-  background: var(--surface-bg-card, #fff);
+  background: var(--surface-bg, #fafafa);
 }
 
 .inputsStyle.error input,
 .inputsStyle.error textarea {
+  background: var(--surface-bg, #fafafa);
   border: 2px solid var(--feedback-error, #ea3a3d);
+  color: var(--text-primary, #1c1c1c);
 }
 
 .inputsStyle.error label {
   color: var(--feedback-error, #ea3a3d);
+  background: var(--surface-bg, #fafafa);
 }
 
 .inputsStyle.error input:focus + label,
+.inputsStyle.error input:hover + label,
 .inputsStyle.error input:not(:placeholder-shown) + label,
 .inputsStyle.error textarea:focus + label,
+.inputsStyle.error textarea:hover + label,
 .inputsStyle.error textarea:not(:placeholder-shown) + label {
   color: var(--feedback-error, #ea3a3d);
+  background: var(--surface-bg, #fafafa);
 }
 
 .valid.inputsStyle input:not(:focus),
@@ -120,11 +141,19 @@
   border-radius: 8px;
   border: 1px solid var(--border-basic, #dee4e9);
   background: var(--surface-bg, #fafafa);
+  color: var(--text-primary, #1c1c1c);
+}
+
+.valid.inputsStyle input:not(:focus):hover,
+.valid.inputsStyle textarea:not(:focus):hover {
+  border: 1px solid var(--text-tertiary, #a7adb1);
+  background: var(--surface-bg, #fafafa);
 }
 
 .valid.inputsStyle input:not(:focus) + label,
 .valid.inputsStyle textarea:not(:focus) + label {
   color: var(--text-secondary, #5f6367);
+  background: var(--surface-bg, #fafafa);
 }
 
 /* Pseudo-element after input when focused */
@@ -136,7 +165,7 @@
   width: 24px;
   height: 24px;
   right: 16px;
-  top: 20px;
+  top: 12px;
   transition: all 0.2s ease;
 }
 
@@ -150,7 +179,7 @@
   width: 24px;
   height: 24px;
   right: 16px;
-  top: 20px;
+  top: 14px;
   transition: all 0.2s ease;
 }
 
@@ -165,10 +194,56 @@
   width: 24px;
   height: 24px;
   right: 16px;
-  top: 20px;
+  top: 14px;
   transition: all 0.2s ease;
 }
 
 .error .errorIconStyle {
   opacity: 1;
+}
+
+.envelopeStyle {
+  position: absolute;
+  right: 60px;
+  top: -48px;
+  rotate: -8deg;
+}
+.envelopeStyleSent {
+  top: -58px;
+}
+
+@media (max-width: 1024px) {
+  .envelopeStyle {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -68px;
+  }
+  .envelopeStyleSent {
+    top: -94px;
+  }
+}
+.formContainerStyle {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageSendTextStyle {
+  color: var(--text-secondary, #5f6367);
+  text-align: center;
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
+}
+
+.messageSendEmailStyle {
+  color: var(--accent-primary, #555cf3);
+  font-family: var(--font-family-primary, Inter);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
 }

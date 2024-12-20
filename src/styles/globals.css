@@ -81,6 +81,8 @@
   --feedback-error: var(--colour-basic-red);
   --feedback-info: var(--colour-basic-blue);
   --feedback-warning: var(--colour-basic-orange);
+
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -98,6 +100,7 @@
     --accent-primary: #7379fe;
     --text-accent-button: var(--colour-neutral-750);
     --surface-bg-case-overview: var(--colour-neutral-800);
+    --envelope-image: var(--envelope-dark);
   }
 }
 

@@ -25,7 +25,7 @@ const GetInTouchCard: React.FC = () => {
   return (
     <div
       className={classNames(
-        "w-[670px] flex-col justify-start items-center inline-flex mb-16 mt-44 overflow-hidden",
+        "max-w-[670px] w-full flex flex-col justify-start items-center mb-24 mt-44 overflow-hidden",
         cardStyle
       )}
     >
@@ -50,8 +50,8 @@ const GetInTouchCard: React.FC = () => {
           <p className={pronounsStyle}>(she/her)</p>
         </div>
         {/* Desktop */}
-        <div className="hidden lg:inline-flex self-stretch justify-between items-end">
-          <div className="flex-col justify-start items-start inline-flex">
+        <div className="hidden lg:flex w-full justify-between items-end">
+          <div className="flex-col justify-start items-start flex">
             <GetInTouchCopyButtonDesktop
               text="+48792562422"
               textToCopy="+48792562422"
@@ -74,8 +74,8 @@ const GetInTouchCard: React.FC = () => {
           <GetInTouchMapLink />
         </div>
         {/* Mobile */}
-        <div className="inline-flex lg:hidden w-full flex-col justify-start items-start gap-4">
-          <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
+        <div className="flex lg:hidden w-full flex-col justify-start items-start gap-4">
+          <div className="self-stretch px-4 rounded-lg justify-between items-center flex">
             <p className="h-6 justify-start items-center gap-2 flex">
               <MailIcon height={18} width={18} className={iconMobileStyle} />
               <span className={contactDetailsMobileStyle}>
@@ -84,14 +84,14 @@ const GetInTouchCard: React.FC = () => {
             </p>
             <GetInTouchCopyButtonMobile textToCopy="ewa@kotowska.com" />
           </div>
-          <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
+          <div className="self-stretch px-4 rounded-lg justify-between items-center flex">
             <p className="h-6 justify-start items-center gap-2 flex">
               <PhoneIcon height={18} width={18} className={iconMobileStyle} />
               <span className={contactDetailsMobileStyle}>+48792562422</span>
             </p>
             <GetInTouchCopyButtonMobile textToCopy="+48792562422" />
           </div>
-          <div className="self-stretch px-4 rounded-lg justify-between items-center inline-flex">
+          <div className="self-stretch px-4 rounded-lg justify-between items-center flex">
             <p className="h-6 justify-start items-center gap-2 flex truncate">
               <LinkedinIcon
                 height={18}
