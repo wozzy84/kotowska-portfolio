@@ -11,13 +11,13 @@ import GetInTouchSection from "@/components/GetInTouchSection";
 export default function Home() {
   return (
     <>
-      {/* <Navbar></Navbar>
+      <Navbar></Navbar>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
       <ExploreSection></ExploreSection>
       <ServicesSection></ServicesSection>
       <TestimonialsSection></TestimonialsSection>
-      <TrustedBySection></TrustedBySection> */}
+      <TrustedBySection></TrustedBySection>
       <GetInTouchSection></GetInTouchSection>
     </>
   );
