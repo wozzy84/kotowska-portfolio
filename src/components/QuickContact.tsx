@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, use } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import QuickContactStyle from "./QuickContactStyle.module.css";
 import Image from "next/image";
