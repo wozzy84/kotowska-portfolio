@@ -7,7 +7,7 @@ interface ErrorChipProps {
 
 const ErrorChip: React.FC<ErrorChipProps> = ({ message }) => {
   return (
-    <div className="w-full mt-[2px] h-8 px-4 py-1.5 bg-[#ea3a3d]/20 rounded-lg justify-center items-center gap-1 inline-flex">
+    <div className="w-full mt-[2px] h-8 px-4 py-1.5 bg-[#ea3a3d]/20 rounded-lg justify-center items-center gap-1 inline-flex text-start">
       <div className="self-stretch py-0.5 justify-center items-start flex">
         <ErrorIcon />
       </div>

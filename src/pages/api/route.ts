@@ -20,8 +20,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
 
     if (response.data.success) {
-      await sendEmail(email, 'New Contact Form Submission', `Email: ${email}\nMessage: ${message}`);
-      return res.status(200).json({ message: 'Success' });
+      const emailRes = await sendEmail(email, 'New Contact Form Submission', `Email: ${email}\nMessage: ${message}`);
+      try {
+        if (emailRes.status === 200) {
+          return res.status(200).json({ message: 'Success' });
+        } else {
+          return res.status(400).json({ message: 'Failed to send email' });
+        }
+      } catch (error) {
+        console.error('Error sending email:', error);
+        return res.status(500).json({ message: 'Internal Server Error' });
+      }
+  
     } else {
       return res.status(400).json({ message: 'Failed to verify' });
     }
