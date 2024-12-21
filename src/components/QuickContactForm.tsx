@@ -113,13 +113,14 @@ const QuickContactForm: React.FC<QuickContactFormProps> = ({
       <div
         className={classNames(inputsStyle, "w-full", {
           [error]: messageError,
+          [valid]: hasSubmitted && !emailError,
         })}
       >
         <textarea
           placeholder=" "
           value={message}
           onChange={handleMessageChange}
-          className="w-full h-24 px-4 bg-[#f2f5f7] rounded-lg"
+          className="w-full h-24 px-4 rounded-lg"
         />
         <label>Message</label>
         {messageError && (

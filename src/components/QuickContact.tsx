@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, use } from "react";
 import classNames from "classnames";
 import QuickContactStyle from "./QuickContactStyle.module.css";
 import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 import QuickContactForm from "./QuickContactForm";
 import QuickContactSuccess from "./QuickContactSuccess";
+import QuickContactError from "./QuickContactError";
 
 const {
   cardStyle,
@@ -43,6 +44,7 @@ const QuickContact: React.FC = () => {
   const [messageSent, setMessageSent] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const imageSourceLight = messageSent
@@ -72,7 +74,7 @@ const QuickContact: React.FC = () => {
   async function handleCaptchaSubmission(token: string | null) {
     try {
       if (token) {
-        await fetch("/api/route", {
+        const response = await fetch("/api/route", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -80,13 +82,20 @@ const QuickContact: React.FC = () => {
           },
           body: JSON.stringify({ token, email, message }),
         });
-        setIsVerified(true);
-        setMessageSent(true);
+        const data = await response.json();
+        if (data.success) {
+          setIsVerified(true);
+        } else {
+          setIsVerified(false);
+          setError(true);
+        }
       }
     } catch (e) {
       console.log("Error sending email:", e);
       setIsVerified(false);
+      setError(true);
     }
+    setMessageSent(true);
   }
 
   const handleSubmitForm = async (email: string, message: string) => {
@@ -104,6 +113,7 @@ const QuickContact: React.FC = () => {
   }
 
   const handleDescription = () => {
+    if (error) return quickContactDescription.somethingWentWrongDescription;
     if (formIsValid && !isVerified)
       return quickContactDescription.reCaptchaDescription;
     if (formIsValid && isVerified)
@@ -134,18 +144,20 @@ const QuickContact: React.FC = () => {
           {handleDescription()}
         </p>
         <div className={formContainerStyle}>
-          {formIsValid && !isVerified && (
+          {error ? (
+            <QuickContactError />
+          ) : formIsValid && !isVerified ? (
             <ReCAPTCHA
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY || ""}
               ref={recaptchaRef}
               onChange={handleChange}
               onExpired={handleExpired}
             />
-          )}
-          {!formIsValid && !isVerified && (
+          ) : formIsValid && isVerified ? (
+            <QuickContactSuccess email={email} />
+          ) : (
             <QuickContactForm handleSubmitForm={handleSubmitForm} />
           )}
-          {formIsValid && isVerified && <QuickContactSuccess email={email} />}
         </div>
       </div>
     </div>

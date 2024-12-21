@@ -84,6 +84,18 @@
   color: var(--text-primary, #1c1c1c);
 }
 
+/* Autofill styles */
+.inputsStyle input:-webkit-autofill,
+.inputsStyle input:-webkit-autofill:hover,
+.inputsStyle input:-webkit-autofill:focus,
+.inputsStyle textarea:-webkit-autofill,
+.inputsStyle textarea:-webkit-autofill:hover,
+.inputsStyle textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--surface-bg-module, #f2f5f7) inset;
+  box-shadow: 0 0 0px 1000px var(--surface-bg-module, #f2f5f7) inset;
+  -webkit-text-fill-color: var(--text-secondary, #5f6367);
+}
+
 .inputsStyle label {
   position: absolute;
   opacity: 0.8;
@@ -242,6 +254,15 @@
 .messageSendEmailStyle {
   color: var(--accent-primary, #555cf3);
   font-family: var(--font-family-primary, Inter);
+  font-size: var(--font-size-md, 16px);
+  font-weight: var(--font-weight-Regular, 400);
+  line-height: var(--font-size-xl, 24px); /* 150% */
+  letter-spacing: -0.16px;
+}
+
+.emailErrorTextStyle {
+  color: var(--feedback-error, #ea3a3d);
+  text-align: center;
   font-size: var(--font-size-md, 16px);
   font-weight: var(--font-weight-Regular, 400);
   line-height: var(--font-size-xl, 24px); /* 150% */
