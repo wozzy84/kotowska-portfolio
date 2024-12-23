@@ -4,6 +4,7 @@ import classNames from "classnames";
 import GetInTouchSectionStyle from "./GetInTouchSectionStyle.module.css";
 import GetInTouchCard from "./GetInTouchCard";
 import QuickContact from "./QuickContact";
+import BootomNavigation from "./BootomNavigation";
 
 const { sectionStyle, sectionBackgroundStyle } = GetInTouchSectionStyle;
 
@@ -12,7 +13,7 @@ const GetInTouchSection: React.FC = () => {
     <section className={sectionStyle}>
       <div
         className={classNames(
-          "flex flex-col justify-center items pb-16",
+          "flex flex-col justify-center items pb-60 md:pb-0",
           sectionBackgroundStyle
         )}
       >
@@ -25,6 +26,7 @@ const GetInTouchSection: React.FC = () => {
           <GetInTouchCard></GetInTouchCard>
           <QuickContact></QuickContact>
         </div>
+        <BootomNavigation />
       </div>
     </section>
   );

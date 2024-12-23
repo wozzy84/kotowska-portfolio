@@ -63,8 +63,9 @@
   --font-line-height-xl: 36px;
   --font-line-height-2xl: 40px;
   --font-line-height-3xl: 52px;
+}
 
-  /* Light theme variables */
+[data-theme="light"] {
   --surface-bg: var(--colour-slate-100);
   --text-primary: var(--colour-neutral-800);
   --text-inverse: var(--colour-slate-100);
@@ -73,7 +74,7 @@
   --text-tertiary: var(--colour-neutral-600);
   --surface-bg-card: var(--colour-basic-true-white);
   --border-basic: var(--colour-slate-300);
-  --surface-bg-footer-card: #ffffff;
+  --surface-bg-footer-card: rgba(255, 255, 255, 0.24);
   --accent-primary: var(--colour-basic-indigo);
   --text-accent-button: var(--colour-slate-200);
   --surface-bg-case-overview: var(--colour-basic-true-white);
@@ -81,27 +82,23 @@
   --feedback-error: var(--colour-basic-red);
   --feedback-info: var(--colour-basic-blue);
   --feedback-warning: var(--colour-basic-orange);
-
-
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark theme variables */
-    --surface-bg: var(--colour-neutral-750);
-    --text-primary: var(--colour-slate-300);
-    --text-inverse: var(--colour-slate-300);
-    --surface-bg-module: var(--colour-neutral-800);
-    --text-secondary: var(--colour-slate-500);
-    --text-tertiary: var(--colour-neutral-600);
-    --surface-bg-card: #212121;
-    --border-basic: var(--colour-neutral-720);
-    --surface-bg-footer-card: #212121;
-    --accent-primary: #7379fe;
-    --text-accent-button: var(--colour-neutral-750);
-    --surface-bg-case-overview: var(--colour-neutral-800);
-    --envelope-image: var(--envelope-dark);
-  }
+[data-theme="dark"] {
+  /* Dark theme variables */
+  --surface-bg: var(--colour-neutral-750);
+  --text-primary: var(--colour-slate-300);
+  --text-inverse: var(--colour-slate-300);
+  --surface-bg-module: var(--colour-neutral-800);
+  --text-secondary: var(--colour-slate-500);
+  --text-tertiary: var(--colour-neutral-600);
+  --surface-bg-card: #212121;
+  --border-basic: var(--colour-neutral-720);
+  --surface-bg-footer-card: rgba(33, 33, 33, 0.24);
+  --accent-primary: #7379fe;
+  --text-accent-button: var(--colour-neutral-750);
+  --surface-bg-case-overview: var(--colour-neutral-800);
+  --envelope-image: var(--envelope-dark);
 }
 
 body {
