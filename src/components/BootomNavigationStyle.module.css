@@ -1,0 +1,129 @@
+.bottomNavSection {
+  background-color: var(--surface-bg-footer-card, rgba(255, 255, 255, 0.24));
+  backdrop-filter: blur(16px);
+}
+
+.bottomNavItems {
+  color: var(--text-secondary, #5f6367);
+  text-align: center;
+  font-size: var(--font-size-xs, 12px);
+  font-weight: var(--font-weight-SemiBold, 600);
+  line-height: 140%; /* 16.8px */
+}
+
+@keyframes toggleAnimation {
+  0% {
+    width: 38px;
+    height: 26px;
+    left: unset;
+    right: 16px;
+    background-image: url("/svgs/toggle-liquid-left.svg");
+  }
+  50% {
+    width: 17px;
+    height: 26px;
+    left: unset;
+    right: 4px;
+    background-image: url("/svgs/toggle-end-right.svg");
+  }
+  100% {
+    width: 26px;
+    height: 26px;
+    left: unset;
+    right: 4px;
+    background-image: url("/svgs/moon-group.svg");
+  }
+}
+
+@keyframes toggleAnimationUncheck {
+  0% {
+    width: 38px;
+    height: 26px;
+    background-image: url("/svgs/toggle-liquid-right.svg");
+    right: unset;
+    left: 16px;
+  }
+  50% {
+    width: 17px;
+    height: 26px;
+    right: unset;
+    left: 4px;
+    background-image: url("/svgs/toggle-end-left.svg");
+  }
+  100% {
+    width: 26px;
+    height: 26px;
+    right: unset;
+    left: 4px;
+    background-image: url("/svgs/sun-group.svg");
+  }
+}
+
+.toggleContainer {
+  position: relative;
+  width: 58px;
+  height: 32px;
+  box-shadow: 0px 1px 1px 0px rgba(68, 60, 119, 0.24) inset;
+  background: var(--surface-bg-module, #f2f5f7);
+  border-radius: 200px;
+}
+
+.toggleCheckbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.toggleLabel::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 26px;
+  height: 26px;
+  background-image: url("/svgs/sun-group.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.toggleLabel:hover::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 4px;
+  top: 4px;
+  background-image: url("/svgs/moon-star-blue.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.toggleCheckbox:checked + .toggleLabel::before {
+  animation: toggleAnimation 0.8s forwards;
+}
+
+.toggleCheckbox:not(:checked) + .toggleLabel::before {
+  animation: toggleAnimationUncheck 0.8s forwards;
+}
+
+.toggleCheckbox:checked + .toggleLabel:hover::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 26px;
+  height: 26px;
+  background-image: url("/svgs/sun-blue.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
