@@ -36,6 +36,7 @@
   --colour-neutral-900: #171717;
   --colour-neutral-750: #212121;
   --colour-neutral-720: #303236;
+  --color-card-shadow: #f2f2f2;
 
   /* Typography */
   --font-family-primary: "Inter", sans-serif;
@@ -82,6 +83,7 @@
   --feedback-error: var(--colour-basic-red);
   --feedback-info: var(--colour-basic-blue);
   --feedback-warning: var(--colour-basic-orange);
+  --card-shadow: var(--color-card-shadow);
 }
 
 [data-theme="dark"] {
@@ -98,7 +100,7 @@
   --accent-primary: #7379fe;
   --text-accent-button: var(--colour-neutral-750);
   --surface-bg-case-overview: var(--colour-neutral-800);
-  --envelope-image: var(--envelope-dark);
+  --card-shadow: transparent;
 }
 
 body {
@@ -109,6 +111,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html.is-locked,

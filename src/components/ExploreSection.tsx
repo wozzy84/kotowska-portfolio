@@ -73,6 +73,7 @@ const ExploreSection: React.FC = () => {
 
   return (
     <section
+      id="portfolio"
       className={classNames(
         "flex flex-col justify-center items-center pb-12",
         ExploreSectionStyle.sectionStyle

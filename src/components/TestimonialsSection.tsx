@@ -9,7 +9,7 @@ const { sectionStyle } = TestimonialsSectionStyle;
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section className={classNames("pb-16", sectionStyle)}>
+    <section id="testimonials" className={classNames("pb-16", sectionStyle)}>
       <SectionHeader
         sectionName="testimonials"
         title="What Clients Say"

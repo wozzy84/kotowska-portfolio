@@ -41,7 +41,7 @@ const { sectionStyle } = ServicesSectionStyle;
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className={classNames("pb-16", sectionStyle)}>
+    <section id="services" className={classNames("pb-16", sectionStyle)}>
       <SectionHeader
         sectionName="services"
         title="What I Do"

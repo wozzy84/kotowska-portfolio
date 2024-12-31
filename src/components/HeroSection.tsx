@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className={HeroSectionStyle.heroSection}>
+    <section id="home" className={HeroSectionStyle.heroSection}>
       <div
         className={classNames(
           "flex flex-col justify-center items",
@@ -34,14 +34,18 @@ const HeroSection: React.FC = () => {
             <Button
               label="Contact me"
               onClick={() => {
-                console.log("contact me");
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               solid
             ></Button>
             <Button
               label="Visit my portfolio"
               onClick={() => {
-                console.log("visit my portfolio");
+                document
+                  .getElementById("portfolio")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             ></Button>
           </div>

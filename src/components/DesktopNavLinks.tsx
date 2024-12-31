@@ -14,7 +14,7 @@ function DesktopNavLinks(): JSX.Element {
           )}
           key={text}
         >
-          <Link href="#">{text}</Link>
+          <Link href={`#${text.toLocaleLowerCase()}`}>{text}</Link>
         </li>
       ))}
     </ul>

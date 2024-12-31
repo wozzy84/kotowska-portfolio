@@ -7,6 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import TrustedBySection from "@/components/TrustedBySection";
 import GetInTouchSection from "@/components/GetInTouchSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <TestimonialsSection></TestimonialsSection>
       <TrustedBySection></TrustedBySection>
       <GetInTouchSection></GetInTouchSection>
+      <Footer></Footer>
     </>
   );
 }

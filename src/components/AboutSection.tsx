@@ -31,6 +31,7 @@ const { aboutSection } = AboutSectionStyle;
 const AboutSection = () => {
   return (
     <section
+      id="about"
       className={classNames(
         "flex justify-center flex-col items-center mx-auto pb-16",
         aboutSection
