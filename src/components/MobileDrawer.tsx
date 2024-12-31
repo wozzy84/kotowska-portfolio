@@ -19,32 +19,32 @@ const MobileMenuItems = [
   {
     title: "Home",
     icon: <HomeIcon />,
-    link: "#",
+    link: "#home",
   },
   {
     title: "About",
     icon: <AboutIcon />,
-    link: "#",
+    link: "#about",
   },
   {
     title: "Portfolio",
     icon: <PortfolioIcon />,
-    link: "#",
+    link: "#portfolio",
   },
   {
     title: "Services",
     icon: <ServicesIcon />,
-    link: "#",
+    link: "#services",
   },
   {
     title: "Testimonials",
     icon: <TestimonialsIcon />,
-    link: "#",
+    link: "#testimonials",
   },
   {
     title: "Contact",
     icon: <ContactIcon />,
-    link: "#",
+    link: "#contact",
   },
 ];
 
@@ -78,6 +78,7 @@ function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               href={item.link}
               className="self-stretch p-2 justify-start items-center gap-2 inline-flex"
               tabIndex={isOpen ? 0 : -1}
+              onClick={onClose}
             >
               {item.icon}
               <span

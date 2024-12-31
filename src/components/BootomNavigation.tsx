@@ -8,10 +8,15 @@ import { MENU_ITEMS } from "@/utils/variables";
 const {
   bottomNavSection,
   bottomNavItems,
-  toggleContainer,
+  toggleContainerStyle,
+  toggleInputContainer,
   toggleCheckbox,
   toggleLabel,
+  isCheckeDescriptionStyle,
 } = BottomNavigationStyle;
+
+const checkedDescription = "switch to light theme";
+const uncheckedDescription = "switch to dark theme";
 
 const BootomNavigation: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -22,10 +27,12 @@ const BootomNavigation: React.FC = () => {
     );
     setIsChecked(darkModeMediaQuery.matches);
     updateTheme(darkModeMediaQuery.matches);
+    notifyThemeChange(darkModeMediaQuery.matches);
 
     const handleChange = (e: MediaQueryListEvent) => {
       setIsChecked(e.matches);
       updateTheme(e.matches);
+      notifyThemeChange(e.matches);
     };
 
     darkModeMediaQuery.addEventListener("change", handleChange);
@@ -45,9 +52,16 @@ const BootomNavigation: React.FC = () => {
 
   const handleChange = () => {
     const newChecked = !isChecked;
+    notifyThemeChange(newChecked);
     setIsChecked(newChecked);
     updateTheme(newChecked);
-    console.log(`Toggle is ${newChecked ? "ON" : "OFF"}`);
+  };
+
+  const notifyThemeChange = (isDark: boolean) => {
+    const event = new CustomEvent("theme:change", {
+      detail: { isDark },
+    });
+    window.dispatchEvent(event);
   };
 
   return (
@@ -62,24 +76,33 @@ const BootomNavigation: React.FC = () => {
         <ul className="flex gap-4 justify-center flex-wrap">
           {MENU_ITEMS.map((text) => (
             <li className={bottomNavItems} key={text}>
-              <Link href="#">{text}</Link>
+              <Link href={`#${text.toLocaleLowerCase()}`}>{text}</Link>
             </li>
           ))}
         </ul>
       </nav>
-      <div className={toggleContainer}>
-        <input
-          type="checkbox"
-          id="toggle"
-          className={toggleCheckbox}
-          checked={isChecked}
-          onChange={handleChange}
-        />
-        <label htmlFor="toggle" className={toggleLabel}></label>
+      <div
+        className={classNames(
+          toggleContainerStyle,
+          "flex items-center justify-center gap-2"
+        )}
+      >
+        <div className={toggleInputContainer}>
+          <input
+            type="checkbox"
+            id="toggle"
+            className={toggleCheckbox}
+            checked={isChecked}
+            onChange={handleChange}
+          />
+          <label htmlFor="toggle" className={toggleLabel}></label>
+        </div>
+        <button onClick={handleChange} className={isCheckeDescriptionStyle}>
+          {isChecked ? checkedDescription : uncheckedDescription}
+        </button>
       </div>
     </section>
   );
 };
 
 export default BootomNavigation;
-

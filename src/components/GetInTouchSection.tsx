@@ -10,7 +10,7 @@ const { sectionStyle, sectionBackgroundStyle } = GetInTouchSectionStyle;
 
 const GetInTouchSection: React.FC = () => {
   return (
-    <section className={sectionStyle}>
+    <section id="contact" className={sectionStyle}>
       <div
         className={classNames(
           "flex flex-col justify-center items pb-60 md:pb-0",

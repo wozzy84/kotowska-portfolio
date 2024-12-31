@@ -47,27 +47,29 @@ const QuickContact: React.FC = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const imageSourceLight = messageSent
-      ? imageSources.lightOpen
-      : imageSources.light;
-    const imageSourceDark = messageSent
-      ? imageSources.darkOpen
-      : imageSources.dark;
-
-    const updateEnvelopeSrc = (e: MediaQueryListEvent) => {
-      setEnvelopeSrc(e.matches ? imageSourceLight : imageSourceDark);
+    const updateEnvelopeSrc = (isDarkMode: boolean) => {
+      if (messageSent) {
+        setEnvelopeSrc(
+          isDarkMode ? imageSources.darkOpen : imageSources.lightOpen
+        );
+      } else {
+        setEnvelopeSrc(isDarkMode ? imageSources.dark : imageSources.light);
+      }
     };
 
-    const darkModeMediaQuery = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    );
-    setEnvelopeSrc(
-      darkModeMediaQuery.matches ? imageSourceDark : imageSourceLight
-    );
-    darkModeMediaQuery.addEventListener("change", updateEnvelopeSrc);
+    const handleThemeChange = (e: Event) => {
+      const isDarkMode = (e as CustomEvent).detail.isDark;
+      updateEnvelopeSrc(isDarkMode);
+    };
+
+    window.addEventListener("theme:change", handleThemeChange);
+
+    const isDarkMode =
+      document.querySelector("html")?.getAttribute("data-theme") === "dark";
+    updateEnvelopeSrc(isDarkMode);
 
     return () => {
-      darkModeMediaQuery.removeEventListener("change", updateEnvelopeSrc);
+      window.removeEventListener("theme:change", handleThemeChange);
     };
   }, [messageSent]);
 
