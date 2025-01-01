@@ -9,7 +9,7 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    --tw-translate-y: 100%;
+    --tw-translate-y: 1000%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -24,7 +24,7 @@
     top: 0;
     width: 900px;
     right: 0;
-    --tw-translate-x: 100%;
+    --tw-translate-x: 1000%;
   }
   .isOpenStyle {
     --tw-translate-x: 0px;

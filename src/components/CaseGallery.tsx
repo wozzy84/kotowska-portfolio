@@ -46,38 +46,40 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
   return (
     <div
       className={classNames(
-        "w-full p-8 lg:pr-0 rounded-bl-lg flex-col justify-start items-start gap-6 inline-flex",
+        "w-full p-8 lg:pr-0 rounded-bl-lg flex-col h-full justify-between items-start inline-flex ",
         sectionStyle
       )}
     >
-      <p className={classNames("lg:pr-8", galleryDescriptionStyle)}>
-        {sliderSummary}
-      </p>
-      <div className="h-[400px] max-w-full relative">
-        <Swiper
-          spaceBetween={0}
-          slidesPerView={"auto"}
-          freeMode={true}
-          centeredSlides={false}
-          modules={[FreeMode]}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          className={swiperWrapperStyle}
-        >
-          {images.map((image, index) => (
-            <SwiperSlide key={index} className={gallerySlideStyle}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                className={imageStyle}
-              />
-            </SwiperSlide>
-          ))}
-          <GalleryNavButtons></GalleryNavButtons>
-        </Swiper>
+      <div>
+        <p className={classNames("pr-16 lg:pr-8", galleryDescriptionStyle)}>
+          {sliderSummary}
+        </p>
+        <div className="h-[400px] max-w-full relative my-6">
+          <Swiper
+            spaceBetween={0}
+            slidesPerView={"auto"}
+            freeMode={true}
+            centeredSlides={false}
+            modules={[FreeMode]}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            className={swiperWrapperStyle}
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={index} className={gallerySlideStyle}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  className={imageStyle}
+                />
+              </SwiperSlide>
+            ))}
+            <GalleryNavButtons></GalleryNavButtons>
+          </Swiper>
+        </div>
       </div>
       <div className="w-[100%] pt-12 pb-4 flex-col justify-end items-start flex">
         <CaseStudyButton label="Close case overview" onClick={onClick} />
