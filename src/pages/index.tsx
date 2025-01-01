@@ -8,10 +8,14 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import TrustedBySection from "@/components/TrustedBySection";
 import GetInTouchSection from "@/components/GetInTouchSection";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Ewa Kotowska</title>
+      </Head>
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>

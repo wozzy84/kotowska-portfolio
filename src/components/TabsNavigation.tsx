@@ -56,7 +56,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
         ))}
       </div>
       <div
-        className="overflow-auto"
+        className="overflow-auto flex flex-col h-full"
         ref={(el) => {
           if (isOpen && el) el.scrollTop = 0;
         }}
@@ -64,7 +64,10 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
         {children.map((child, index) => (
           <div
             key={index}
-            className={classNames({ hidden: activeTab !== index })}
+            className={classNames(
+              { hidden: activeTab !== index },
+              "flex flex-col h-full"
+            )}
           >
             {child}
           </div>

@@ -8,6 +8,7 @@
   background-position-x: center;
   background-position-y: 20%;
   text-align: center;
+  background-attachment: fixed; /* This creates the parallax effect */
 }
 
 .heroHeader {
@@ -35,4 +36,18 @@
   font-size: var(--font-size-lg, 18px);
   font-weight: var(--font-weight-Medium, 500);
   line-height: 24px; /* 133.333% */
+}
+
+.heroImage {
+  width: 436px;
+  height: 572px;
+  background-image: url("/images/ewa_hero.webp");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+@media (min-width: 1024px) {
+  .heroImage {
+    height: 500px;
+  }
 }

@@ -1,19 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSectionStyle from "./HeroSectionStyle.module.css";
 import classNames from "classnames";
 import Button from "./Button";
-import Image from "next/image";
 
 const HeroSection: React.FC = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const background = document.getElementById("home-background");
+
+      if (background) {
+        background.style.backgroundPositionY = `${
+          -460 - scrollPosition * 1.6
+        }px`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section id="home" className={HeroSectionStyle.heroSection}>
       <div
+        id="home-background"
         className={classNames(
           "flex flex-col justify-center items",
           HeroSectionStyle.heroSectionBackground
         )}
       >
-        <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-16 px-4">
+        <div className="container mx-auto max-w-screen-xl flex flex-col justify-center items-center pt-16 px-4 pb-6 lg:pb-0">
           <h1 className={classNames("mb-2", HeroSectionStyle.heroHeader)}>
             Hello, my name is Ewa
           </h1>
@@ -49,7 +68,7 @@ const HeroSection: React.FC = () => {
               }}
             ></Button>
           </div>
-          <Image width="437" height="748" src="/images/ewa.webp" alt="Ewa" />
+          <div className={HeroSectionStyle.heroImage}></div>
         </div>
       </div>
     </section>
