@@ -3,11 +3,6 @@
   background: var(--surface-bg-card, #fff);
 }
 
-@media (prefers-color-scheme: dark) {
-  .aboutCard {
-    background-color: rgba(33, 33, 33, 0.64);
-  }
-}
 
 .aboutMy {
   color: var(--text-primary, #1c1c1c);

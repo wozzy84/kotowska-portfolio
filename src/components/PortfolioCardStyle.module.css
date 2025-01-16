@@ -5,12 +5,10 @@
 @media (min-width: 768px) {
   .cardStyle:hover {
     background: var(--surface-bg-card, #fff);
-    box-shadow: 0px 4px 250px rgba(27, 22, 255, 0.1);
-  }
-  @media (prefers-color-scheme: dark) {
-    .cardStyle:hover {
-      box-shadow: 0px 4px 250px rgba(226, 135, 235, 0.24);
-    }
+    box-shadow: var(
+      --portfolio-card-hover,
+      0px 4px 250px rgba(27, 22, 255, 0.1)
+    );
   }
 }
 

@@ -252,12 +252,18 @@
 }
 
 .messageSendEmailStyle {
-  color: var(--accent-primary, #555cf3);
+  color: var(--accent-primary, rgb(85, 92, 243));
   font-family: var(--font-family-primary, Inter);
   font-size: var(--font-size-md, 16px);
   font-weight: var(--font-weight-Regular, 400);
   line-height: var(--font-size-xl, 24px); /* 150% */
   letter-spacing: -0.16px;
+}
+
+@media (min-width: 1024px) {
+  .messageSendEmailStyle:hover {
+    color: rgba(85, 92, 243, 0.8);
+  }
 }
 
 .emailErrorTextStyle {

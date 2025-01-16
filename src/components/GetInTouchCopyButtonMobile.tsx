@@ -18,7 +18,7 @@ const GetInTouchCopyButtonMobile: React.FC<CopyButtonProps> = ({
   const handleCopy = () => {
     navigator.clipboard.writeText(textToCopy).then(() => {
       setCopied(true);
-      const timeoutId = setTimeout(() => setCopied(false), 3000);
+      const timeoutId = setTimeout(() => setCopied(false), 800);
       return () => clearTimeout(timeoutId);
     });
   };

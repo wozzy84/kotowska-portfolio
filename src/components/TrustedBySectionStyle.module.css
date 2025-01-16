@@ -1,3 +1,7 @@
 .sectionStyle {
+  background: var(--surface-bg-module, #f4f4f4);
+}
+
+.sectionBlurStyle {
   background: var(--surface-bg-card, #fff);
 }
