@@ -36,11 +36,11 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
   return (
     <section
       className={classNames(
-        "w-full p-8 rounded-bl-lg flex flex-col justify-start items-start",
+        "w-full p-8 rounded-bl-lg flex-col h-full justify-between items-start inline-flex",
         sectionStyle
       )}
     >
-      <div className="flex flex-col justify-start items-start h-full relative">
+      <div className="flex flex-col justify-start items-start relative">
         {sections.map((section, index) => (
           <div key={index}>
             <h2 className={titleStyle}>
@@ -55,7 +55,12 @@ const CaseOverview: React.FC<CaseOverviewProps> = ({
         ))}
         <CirckeDotIcon className={dotIconStyle} />
       </div>
-      <div className="w-[100%] pt-12 pb-4 flex-col justify-end items-start flex">
+      <div
+        className={classNames(
+          "w-[100%] pt-12 pb-4 flex-col justify-end items-start flex",
+          sectionStyle
+        )}
+      >
         <CaseStudyButton label="Close case overview" onClick={onClick} />
       </div>
     </section>
