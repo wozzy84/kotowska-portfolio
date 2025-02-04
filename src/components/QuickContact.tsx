@@ -85,7 +85,7 @@ const QuickContact: React.FC = () => {
           body: JSON.stringify({ token, email, message }),
         });
         const data = await response.json();
-        if (data.success) {
+        if (data.message === "Success") {
           setIsVerified(true);
         } else {
           setIsVerified(false);
