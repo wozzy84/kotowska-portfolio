@@ -46,7 +46,7 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
   return (
     <div
       className={classNames(
-        "w-full p-8 lg:pr-0 rounded-bl-lg flex-col h-full justify-between items-start inline-flex ",
+        "w-full p-8 lg:pr-0 rounded-bl-lg flex-col h-full justify-between items-start inline-flex",
         sectionStyle
       )}
     >
