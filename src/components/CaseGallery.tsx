@@ -69,6 +69,7 @@ const CaseGallery: React.FC<CaseGalleryProps> = ({
             {images.map((image, index) => (
               <SwiperSlide key={index} className={gallerySlideStyle}>
                 <Image
+                  loading="lazy"
                   src={image.src}
                   alt={image.alt}
                   width={image.width}

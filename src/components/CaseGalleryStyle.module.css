@@ -32,6 +32,10 @@
   user-select: none;
 }
 
+.swiperWrapperStyle {
+  max-width: 100vw;
+}
+
 @media (min-width: 1024px) {
   .swiperWrapperStyle {
     min-width: 600px;
