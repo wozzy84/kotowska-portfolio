@@ -106,11 +106,11 @@
 }
 
 .toggleCheckbox:checked + .toggleLabel::before {
-  animation: toggleAnimation 0.8s forwards;
+  animation: toggleAnimation 0.4s forwards;
 }
 
 .toggleCheckbox:not(:checked) + .toggleLabel::before {
-  animation: toggleAnimationUncheck 0.8s forwards;
+  animation: toggleAnimationUncheck 0.4s forwards;
 }
 
 .toggleContainerStyle:hover .toggleCheckbox:not(:checked) + .toggleLabel:after {
