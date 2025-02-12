@@ -9,8 +9,13 @@ interface TabNavigationProps {
   isOpen: boolean;
 }
 
-const { tabContainerStyle, navButtonStyle, buttonTextStyle, activeStyle } =
-  CaseStudyNavigationStyle;
+const {
+  tabContainerStyle,
+  navButtonStyle,
+  buttonTextStyle,
+  activeStyle,
+  navChildrenStyle,
+} = CaseStudyNavigationStyle;
 
 const TabNavigation: React.FC<TabNavigationProps> = ({
   tabs,
@@ -56,7 +61,10 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
         ))}
       </div>
       <div
-        className="overflow-auto flex flex-col h-full"
+        className={classNames(
+          "overflow-auto flex flex-col h-full",
+          navChildrenStyle
+        )}
         ref={(el) => {
           if (isOpen && el) el.scrollTop = 0;
         }}
