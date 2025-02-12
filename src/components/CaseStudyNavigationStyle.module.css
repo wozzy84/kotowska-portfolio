@@ -21,3 +21,7 @@
   border-bottom: 2px solid var(--accent-primary, #555cf3);
   color: var(--accent-primary, #555cf3);
 }
+
+.navChildrenStyle {
+  background: var(--surface-bg-case-overview, #fff);
+}
