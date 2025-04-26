@@ -41,9 +41,14 @@
 
 .heroImage {
   width: 436px;
-  height: 500px;
+  height: 602px;
   background-image: url("/images/ewa_hero.webp");
   background-repeat: no-repeat;
   background-position: top;
-  overflow: hidden;
+  background-size: cover;
+}
+@media (min-width: 1024px) {
+  .heroImage {
+    height: 560px;
+  }
 }
