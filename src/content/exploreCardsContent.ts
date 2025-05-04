@@ -15,7 +15,7 @@ export const exploreCardsContent: ExploreCard[] = [
     description:
       "Carrotspot is a platform designed to manage complex HR operations, benefit distribution, and process optimisation across a large-scale organisation. I joined the project in its early phase as the sole UX designer, tasked with transforming an engineer-driven system into a more intuitive and user-friendly experience.",
     imageUrl: "images/carrot_thumbnail.webp",
-    mobileImageUrl: "images/carrot_thumbnail.webp",
+    mobileImageUrl: "images/carrot_thumbnail_small.webp",
     reversed: false,
   },
       {
