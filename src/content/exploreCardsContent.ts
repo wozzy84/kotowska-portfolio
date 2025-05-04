@@ -9,6 +9,24 @@ export interface ExploreCard {
 }
 
 export const exploreCardsContent: ExploreCard[] = [
+    {
+    tag: "Web Platform",
+    title: "Carrotspot – UX Overhaul of a Developer-Built HR Platform",
+    description:
+      "Carrotspot is a platform designed to manage complex HR operations, benefit distribution, and process optimisation across a large-scale organisation. I joined the project in its early phase as the sole UX designer, tasked with transforming an engineer-driven system into a more intuitive and user-friendly experience.",
+    imageUrl: "images/carrot_thumbnail.webp",
+    mobileImageUrl: "images/carrot_thumbnail.webp",
+    reversed: false,
+  },
+      {
+    tag: "Web Platform",
+    title: "From Brand to System: Shaping LUX MED’s New Digital Experience",
+    description:
+      "LUX MED Benefity is a corporate-facing platform for managing employee benefits and cafeteria programmes. After its rebranding and strategic shift, I was retained as the sole UX designer to build a new design system from the ground up — aligning it with the LUX MED brand while keeping the platform live, stable, and scalable.",
+    imageUrl: "images/luxmed_thumbnail.webp",
+    mobileImageUrl: "images/luxmed_thumbnail_small.webp",
+    reversed: true,
+  },
   {
     tag: "Mobile App",
     title: "Designing an AED Access App: Life-Saving Simplicity",
@@ -28,21 +46,12 @@ export const exploreCardsContent: ExploreCard[] = [
     reversed: true,
   },
   {
-    tag: "Web Platform",
-    title: "Carrotspot – HR Operations Platform for LUX MED Group",
-    description:
-      "Carrotspot is a comprehensive platform designed to manage complex HR operations, benefit distribution, and process optimization. Alongside the core platform, it also features Carrotspot LAB, a specialized blog for knowledge sharing, and a corporate website to promote the product. I joined the project as the sole UX designer when the product was in its infancy, tasked with transforming an initial framework into a user-friendly and visually appealing system.",
-    imageUrl: "images/luxmed_thumbnail.webp",
-    mobileImageUrl: "images/luxmed_thumbnail_small.webp",
-    reversed: false,
-  },
-  {
     tag: "Web Design",
     title: "Unifying a Complex Website System for Sustainable Brands",
     description:
       "Sustainable Brands’ website ecosystem had grown organically over many years, resulting in a scattered, inconsistent collection of sites serving different functions: public-facing information, internal user platforms, and conference management tools. My task was to modernise the user experience by merging these separate systems into a single, cohesive, and user-friendly digital platform.",
     imageUrl: "images/sustainable_thumbnail.webp",
     mobileImageUrl: "images/sustainable_thumbnail_small.webp",
-    reversed: true,
-  },
+    reversed: false
+  }
 ];
