@@ -26,7 +26,79 @@ export interface CaseStudyImage {
 }
 
 export const caseStudyContent: Record<string, CaseStudyContent> = {
-    "1_aed": {
+        "1_carrot": {
+        tag: "Mobile App",
+        title: "Carrotspot – UX Overhaul of a Developer-Built HR Platform",
+        subtitle: "LUX MED Group – Leader in private health care services",
+        description: "As the sole UX designer, I joined Carrotspot early in its development and worked across multiple iterations of the product. Despite the constraints of a developer-led architecture and limited resources, I incrementally improved usability, designed and tested new features, and introduced client-specific gamified UI elements to increase engagement. The project evolved significantly over time, and my long-term involvement helped stabilise the user experience and lay the groundwork for future transformation.",
+        overview:{
+            title: "Project Overview",
+            description: "Carrotspot is a comprehensive platform built to manage HR operations, benefit distribution, and internal processes for large organisations. In its initial phase, it included a core application, an informational blog (Carrotspot LAB), and a promotional corporate website. I joined the team as the only UX designer, working closely with developers to gradually shape a more user-focused product from an existing technical framework"
+        },
+        challenge:{
+            title: "The Challenge",
+            description: "The platform was initially developed without UX input — its interface reflected a developer-oriented mindset, prioritising logic over usability. I couldn’t overhaul the system from scratch, so I approached the problem incrementally, identifying pain points and proposing user-friendly improvements. The product was being developed by a small team without a dedicated business analyst, meaning I often served as the link between users, tech, and business expectations."
+        },
+        approach: {
+            title: "The Approach",
+            description: "My approach was pragmatic and iterative. I began with a usability audit to identify issues, then prioritised changes that could be implemented with minimal disruption. I designed new features, mockups, and UI components tailored to the platform’s evolving needs. In one of the client-specific modules, I helped design an unusually creative engagement layer: a gamified, fantasy-themed training interface built around a floating island map, where users “visited” locations to complete learning tasks. It was a highly customised and imaginative feature — a sharp contrast to the otherwise conventional HR tooling."
+        },
+        solution: {
+            title: "The Solution",
+            description: "Through continuous collaboration with developers and stakeholders, I delivered a cohesive, more accessible UI while working within existing platform limitations. My input improved core usability, shaped product direction, and helped maintain visual consistency as the platform grew in complexity. As the product matured, my role expanded to cover broader UX strategy and cross-feature alignment." 
+        },
+        outcomes:{
+            title: "Outcomes and Takeaways",
+            description: "The result was a functional and uniquely engaging platform that evolved significantly over time, both in terms of user experience and product maturity. My involvement across multiple development cycles helped stabilise the platform’s foundation and positioned it for further growth. Eventually, the product was adopted and integrated by a major healthcare group, which marked the beginning of a new development phase under a new name and strategy — a story that continues in a separate project."
+        },
+        sliderSummary: "As the sole UX designer, I joined Carrotspot early in its development and worked across multiple iterations of the product. Despite the constraints of a developer-led architecture and limited resources, I incrementally improved usability, designed and tested new features, and introduced client-specific gamified UI elements to increase engagement. The project evolved significantly over time, and my long-term involvement helped stabilise the user experience and lay the groundwork for future transformation.",
+        images: [
+            {src: "/images/carrot_1.webp", alt: "Carrotspot Platform", width: 661, height: 400}, 
+            {src: "/images/carrot_2.webp", alt: "Carrotspot Platform", width: 496, height: 400}, 
+            {src: "/images/carrot_3.webp", alt: "Carrotspot Platform", width: 661, height: 400}, 
+            {src: "/images/carrot_4.webp", alt: "Carrotspot Platform", width: 757, height: 400}, 
+            {src: "/images/carrot_5.webp", alt: "Carrotspot Platform", width: 424, height: 400}, 
+        ],
+        
+    },
+     "2_luxmed": {
+        tag: "Web Platform",
+        title: "From Brand to System: Shaping LUX MED’s New Digital Experience",
+        subtitle: "LUX MED Group – Leader in private health care services",
+        description: "After Carrotspot was acquired and rebranded as LUX MED Benefity, I remained as the sole UX specialist, tasked with designing an entirely new design system for the platform. My role involved creating a scalable, brand-aligned system with comprehensive documentation — all while the product remained live and in daily use by major enterprise clients. The challenge was delivering a deep visual and functional transformation with minimal disruption to its users.",
+        overview:{
+            title: "Project Overview",
+            description: "LUX MED Benefity is a benefit management and cafeteria platform serving employees of Poland’s largest corporations. Originally developed under the Carrotspot brand, the platform was acquired and repurposed by LUX MED, shifting its focus from broad HR operations to targeted benefits management. I stayed on through this transition as the sole UX designer. My primary responsibility was to design a completely new design system grounded in LUX MED’s corporate identity — a visual language previously used mostly in static marketing contexts, with little guidance for digital interfaces. This required translating the brand’s core principles into a consistent, functional UI language tailored for a complex, user-facing product. The new system needed to feel familiar to existing users while modernising the experience and ensuring long-term scalability. At the same time, I supported the newly formed development and analytics teams as the project grew into a more structured and collaborative environment."
+
+        },
+        challenge:{
+            title: "The Challenge",
+            description: "The shift from Carrotspot to LUX MED Benefity brought sweeping changes — a new name, new strategic focus, new team members, and a stricter alignment with a major healthcare brand. At the same time, the platform had to remain operational for its enterprise clients, which include some of the largest employers in the country. The main challenge was delivering a complete visual and functional overhaul without disrupting the user experience. I had to design a full design system and documentation layer from scratch, based on a corporate identity that wasn’t built for digital products. Additionally, we were migrating from an ad hoc, loosely documented workflow into a more structured ecosystem using tools like Jira and Confluence — which, for the first time, gave us clarity and consistency in how we collaborated."
+        },
+        approach: {
+            title: "The Approach",
+            description: "My first step was to interpret LUX MED’s corporate identity guidelines and shape them into scalable design principles for digital use. While the CVI provided some direction — including a designated digital typeface and general visual tone — it was primarily built for print and marketing. At the same time, there was an existing LUX MED platform for patients, which I treated as a secondary reference point to maintain brand cohesion. Navigating these two sources, I made deliberate design decisions to modernise and unify the interface while keeping the experience recognisable and grounded in the brand. I conducted a partial audit of the original Carrotspot interface to evaluate which elements could be retained or evolved. I then designed a Figma-based system architecture to cover foundations, UI components, and interface patterns. Throughout the process, I collaborated with developers, analysts, and QA to ensure alignment and shared ownership of the system."
+        },
+        solution: {
+            title: "The Solution",
+            description: "The result was a fully developed design system tailored to LUX MED Benefity — including visual foundations, reusable components, interface patterns, and an evolving documentation suite. The system was designed with accessibility and clarity in mind, while ensuring recognisability for existing users and future scalability for new modules. What I’m especially proud of is the documentation: it’s the most comprehensive visual guide I’ve produced to date. Beyond usage rules and specs, it outlines design logic, component rationale, and usage scenarios — something I’ve always wished to encounter more often in my own UX work. This foundation now serves both designers and developers as a shared language across the platform." 
+        },
+        outcomes:{
+            title: "Outcomes and Takeaways",
+            description: "The new design system brought visual and structural coherence to LUX MED Benefity, while respecting its legacy and user base. The transition happened without disrupting the platform’s operation — a critical requirement given the scale of its corporate clients. This project taught me the value of deep documentation, and how design systems can function as both strategic tools and cultural assets. Moving from a loose, reactive workflow to a structured, collaborative product environment was a defining shift, and one I’m proud to have supported from the inside out."
+        },
+
+        sliderSummary: "After Carrotspot was acquired and rebranded as LUX MED Benefity, I remained as the sole UX specialist, tasked with designing an entirely new design system for the platform. My role involved creating a scalable, brand-aligned system with comprehensive documentation — all while the product remained live and in daily use by major enterprise clients. The challenge was delivering a deep visual and functional transformation with minimal disruption to its users.", 
+
+        images: [
+               {src: "/images/luxmed01.webp", alt: "Luxmed Platform", width: 655, height: 400}, 
+               {src: "/images/luxmed02.webp", alt: "Luxmed Platform", width: 655, height: 400}, 
+               {src: "/images/luxmed03.webp", alt: "Luxmed Platform", width: 655, height: 400}, 
+              
+        ],
+        
+    },
+    "3_aed": {
         tag: "Mobile App",
         title: "Designing an AED Access App: Life-Saving Simplicity",
         subtitle: "KMD (Major IT Solutions Provider) & Polpharma (Poland's Largest Pharmaceutical Manufacturer)",
@@ -59,7 +131,7 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
         ],
         
     },
-    "2_workzone":  {
+    "4_workzone":  {
         tag: "Cross-platform",
         title: "Enhancing WorkZone: User-Centric Design for KMD's EIM Platform",
         subtitle: "KMD - Major IT Solutions Provider",
@@ -93,44 +165,8 @@ export const caseStudyContent: Record<string, CaseStudyContent> = {
         ],
         
     },
-    "3_luxmed": {
-        tag: "Web Platform",
-        title: "Carrotspot – HR Operations Platform for LUX MED Group",
-        subtitle: "LUX MED Group – Leader in private health care services",
-        description: "As a sole UX designer, I joined the Carrotspot project at its early stage and was responsible for designing an engaging UI for a complex HR platform. Despite the constraints of an existing developer-centric framework, I incrementally optimised usability, designed new features, and gamified key elements. After LUX MED acquired the platform, I redesigned the UI to align with their corporate identity and tackled significant market-specific adaptations. The most challenging aspects were working in a small team with minimal resources, lack of business analysis, and overcoming inherited usability issues. Through hard work, creativity, and persistence, I delivered a highly functional product ready for the next phase of growth.",
-        overview:{
-            title: "Project Overview",
-            description: "Carrotspot is a comprehensive platform designed to manage complex HR operations, benefit distribution, and process optimization. Alongside the core platform, it also features Carrotspot LAB, a specialized blog for knowledge sharing, and a corporate website to promote the product. I joined the project as the sole UX designer when the product was in its infancy, tasked with transforming an initial framework into a user-friendly and visually appealing system."
-        },
-        challenge:{
-            title: "The Challenge",
-            description: "When I joined the team, the product’s usability was far from ideal, having been entirely designed by developers with minimal focus on user experience. My role was to create an engaging, intuitive UI for a platform that already existed but had considerable gaps in usability. I couldn’t overhaul the system in one go, so I had to work incrementally, making improvements where possible while working around existing constraints. Additionally, the project was being developed by a very small team, and there was no dedicated business analyst. As a result, complex features were often built with limited understanding from both the business and development sides, leaving me to bridge the gap between what was built and what was actually needed."
-        },
-        approach: {
-            title: "The Approach",
-            description: "My approach was to be pragmatic and patient. I started by auditing the platform, identifying usability issues, and prioritizing areas that could be improved without disrupting the overall system. I created prototypes and mockups to visualize how new features and improvements could be seamlessly integrated into the platform. <br/><br/> For new features, I designed UI components that aligned with the platform's growing needs while keeping the user experience as intuitive as possible. One of the more creative aspects was the development of a fantasy-themed UI where navigation took the form of a map of a fantastic world. Achievements and interactions were gamified, inspired by classic RPG games, making the platform not only functional but also engaging and fun for the users."
-        },
-        solution: {
-            title: "The Solution",
-            description: "Through numerous iterations, I delivered a refined and cohesive UI that worked within the platform's existing technical constraints. My designs improved the overall usability and addressed many of the early design flaws. When LUX MED acquired the platform, I was tasked with adapting the system to a new corporate visual identity and modifying it to fit market-specific needs. This required a complete redesign of the UI to ensure it aligned with LUX MED’s branding guidelines, as well as further adjustments to meet the expectations of the health care sector." 
-        },
-        outcomes:{
-            title: "Outcomes and Takeaways",
-            description: "The result was a robust platform that not only met the business needs but also provided an enjoyable experience for its users. The gamification aspect of the platform became a unique selling point, making HR operations more engaging. After LUX MED’s acquisition, the platform successfully transitioned into the healthcare market with a clean and professional interface that reflected their brand. <br/><br/>The project pushed me to think creatively while dealing with real-world constraints like existing frameworks, limited resources, and a lack of upfront analysis. Ultimately, I learned that patience, clear communication, and a relentless focus on the user experience can overcome even the most chaotic environments."
-        },
-
-        sliderSummary: "As a sole UX designer, I joined the Carrotspot project at its early stage and was responsible for designing an engaging UI for a complex HR platform. Despite the constraints of an existing developer-centric framework, I incrementally optimised usability, designed new features, and gamified key elements. After LUX MED acquired the platform, I redesigned the UI to align with their corporate identity and tackled significant market-specific adaptations. The most challenging aspects were working in a small team with minimal resources, lack of business analysis, and overcoming inherited usability issues. Through hard work, creativity, and persistence, I delivered a highly functional product ready for the next phase of growth.", 
-
-        images: [
-               {src: "/images/luxmed_1.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
-               {src: "/images/luxmed_2.webp", alt: "Luxmed Platform", width: 496, height: 400}, 
-               {src: "/images/luxmed_3.webp", alt: "Luxmed Platform", width: 661, height: 400}, 
-               {src: "/images/luxmed_4.webp", alt: "Luxmed Platform", width: 757, height: 400}, 
-               {src: "/images/luxmed_5.webp", alt: "Luxmed Platform", width: 424, height: 400}, 
-        ],
-        
-    },
-    "4_sustainability":  {
+   
+    "5_sustainability":  {
         tag: "Website",
         title: "Unifying a Complex Website System for Sustainable Brands",
         subtitle: "Sustainable Brands - Public Benefit Corporation",

@@ -8,10 +8,11 @@ import { CaseStudyContent, caseStudyContent } from "@/content/caseStudyContent";
 import { exploreCardsContent } from "@/content/exploreCardsContent";
 
 enum CaseStudyContentEnum {
-  "1_aed",
-  "2_workzone",
-  "3_luxmed",
-  "4_sustainability",
+  "1_carrot",
+  "2_luxmed",
+  "3_aed",
+  "4_workzone",
+  "5_sustainability",
 }
 
 const ExploreSection: React.FC = () => {
